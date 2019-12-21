@@ -1,0 +1,30 @@
+footer{
+    display: flex;
+    align-items: center;
+    height: 30vh;
+    width: 100%;
+    background-color: rgb(37, 37, 37);
+}
+
+.placement_lien_reseau{
+    display: flex;
+    align-items: center;
+}
+
+.espace_lien_footer{
+    padding: 10px 0;
+}
+
+.taille_reseau{
+    display: flex;
+    justify-content: space-around;
+}
+
+.size_img_reseau{
+    width: 25%;
+    height: 100%;
+}
+
+.row{
+    margin-right: 15px;
+}

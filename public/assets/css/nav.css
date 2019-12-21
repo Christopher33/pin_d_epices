@@ -1,0 +1,44 @@
+.ligne-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 10vh;
+    line-height: 10vh;
+    width: 100%;
+    background-color: rgba(92, 0, 35, 0.6);
+    animation: bouton_nav 1.5s cubic-bezier(0.4, -0.23, 0.51, 1.33) forwards;
+}
+
+@keyframes bouton_nav{
+    from{
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+a{
+    color: white;
+}
+
+a:hover{
+    color: white;
+    text-decoration: none;
+    transition: all 0.1s ease;
+    text-shadow: 0 0 1vw rgba(255, 255, 255, 0.7),
+    0 0 2vw rgba(255, 255, 255, 0.6);
+}
+
+.les4{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2em;
+}
+
+.zoo:hover{
+    transform: scale(1.1);
+}
+

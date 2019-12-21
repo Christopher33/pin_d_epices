@@ -1,0 +1,43 @@
+.fond-inscription{
+    background-color: rgba(0, 0, 0, 0.64);
+    height: 130vh;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inscription{
+    padding: 30px;
+    background-color: #718C00;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+div input{
+    display: flex;
+}
+
+.cote_a_cote{
+    display: flex;
+}
+
+.placement_nav{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.placement_footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}

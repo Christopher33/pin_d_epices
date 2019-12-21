@@ -1,0 +1,78 @@
+/* header */
+
+.imgtop{
+    background: url("../img/fontop.jpg") center;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.pec{
+    position: absolute;
+    top: 16%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.pe{
+    font-family: 'Lobster', cursive;
+    color: rgb(119, 0, 46);
+    font-size: 10vw;
+    text-shadow: 3px 3px 2px rgb(51, 0, 0);
+}
+
+.smooth{
+    opacity: 0;
+    animation: smoo 1.5s forwards;
+    animation-delay: 1s;
+}
+
+@keyframes smoo{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.boite{
+    position: absolute;
+    top: 54%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.textacroch{
+    color: rgb(78, 35, 0);
+    font-size: 2em;
+    font-family: 'Bad Script', cursive;
+}
+
+/* bouton de connexion et d'insccription */
+.bt2{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    display: flex;
+    transform: translate(-50%, -50%);
+}
+
+.bt{
+    color: rgba(78, 35, 0, 0.8);
+    padding: 15px 30px;
+    border: solid 2px rgba(78, 35, 0, 0.6);
+    border-radius: 4px;
+    margin: 0 15px;
+    background-color: rgba(224, 191, 159, 0.6);
+    font-size: 20px;
+}
+
+.bt:hover{
+    color: rgb(224, 191, 159);
+    text-shadow: none;
+    background-color: rgba(78, 35, 0, 0.6);
+    transition: all .2s ease;
+}

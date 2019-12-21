@@ -1,0 +1,29 @@
+<header class="imgtop">
+
+    {% include 'common/_nav.html.twig' %}
+
+    <div class="pec">
+        <span class="pe">Pin d'épices</span>
+    </div>
+
+    <div class="smooth">
+        <div class="boite">
+            {% if is_granted("IS_AUTHENTICATED_FULLY") %}
+                <span class="textacroch">Bonjour {{ app.user.firstName }}</span>
+            {% else %}
+                <span class="textacroch">Des produits locaux de saison, cuisinée à coté de chez vous<br>Livrés pour vous !</span>
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="bt2">
+        {% if is_granted("IS_AUTHENTICATED_FULLY") %}
+            <a href="#" class="bt">Commande</a>
+            <a href="{{ path('app_logout') }}" class="bt">Déconnexion</a>
+        {% else %}
+            <a href="{{ path('app_register') }}" class="bt">Inscription</a>
+            <a href="{{ path('app_login') }}" class="bt">Connexion</a>
+        {% endif %}
+    </div>
+
+</header>
