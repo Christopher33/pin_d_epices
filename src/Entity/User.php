@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\UserInterface;
@@ -56,9 +58,14 @@ class User implements UserInterface
     private $phone;
 
     /**
-     * @ORM\OneToOne(targetEntity="App\Entity\Commande", cascade={"persist", "remove"})
+     * @ORM\OneToMany(targetEntity="App\Entity\Commande", mappedBy="users", orphanRemoval=true)
      */
-    private $Commande;
+    private $commandes;
+
+    public function __construct()
+    {
+        $this->commandes = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -121,23 +128,6 @@ class User implements UserInterface
         return $this;
     }
 
-    /**
-     * @see UserInterface
-     */
-    public function getSalt()
-    {
-        // not needed when using the "bcrypt" algorithm in security.yaml
-    }
-
-    /**
-     * @see UserInterface
-     */
-    public function eraseCredentials()
-    {
-        // If you store any temporary, sensitive data on the user, clear it here
-        // $this->plainPassword = null;
-    }
-
     public function setUsername(string $username): self
     {
         $this->username = $username;
@@ -181,15 +171,51 @@ class User implements UserInterface
         return $this;
     }
 
-    public function getCommande(): ?Commande
+    /**
+     * @inheritDoc
+     */
+    public function getSalt()
     {
-        return $this->Commande;
+        // TODO: Implement getSalt() method.
     }
 
-    public function setCommande(?Commande $Commande): self
+    /**
+     * @inheritDoc
+     */
+    public function eraseCredentials()
     {
-        $this->Commande = $Commande;
+        // TODO: Implement eraseCredentials() method.
+    }
+
+    /**
+     * @return Collection|Commande[]
+     */
+    public function getCommandes(): Collection
+    {
+        return $this->commandes;
+    }
+
+    public function addCommande(Commande $commande): self
+    {
+        if (!$this->commandes->contains($commande)) {
+            $this->commandes[] = $commande;
+            $commande->setUsers($this);
+        }
 
         return $this;
     }
+
+    public function removeCommande(Commande $commande): self
+    {
+        if ($this->commandes->contains($commande)) {
+            $this->commandes->removeElement($commande);
+            // set the owning side to null (unless already changed)
+            if ($commande->getUsers() === $this) {
+                $commande->setUsers(null);
+            }
+        }
+
+        return $this;
+    }
+
 }

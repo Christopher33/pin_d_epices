@@ -17,29 +17,35 @@ class Commande
     private $id;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="integer", nullable=true)
      */
     private $plat;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="integer", nullable=true)
      */
     private $dessert;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="integer", nullable=true)
      */
     private $canette;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="integer", nullable=true)
      */
     private $eau;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="integer", nullable=true)
      */
     private $boisson;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\user", inversedBy="commandes")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $users;
 
     public function getId(): ?int
     {
@@ -51,7 +57,7 @@ class Commande
         return $this->plat;
     }
 
-    public function setPlat(int $plat): self
+    public function setPlat(?int $plat): self
     {
         $this->plat = $plat;
 
@@ -63,7 +69,7 @@ class Commande
         return $this->dessert;
     }
 
-    public function setDessert(int $dessert): self
+    public function setDessert(?int $dessert): self
     {
         $this->dessert = $dessert;
 
@@ -75,7 +81,7 @@ class Commande
         return $this->canette;
     }
 
-    public function setCanette(int $canette): self
+    public function setCanette(?int $canette): self
     {
         $this->canette = $canette;
 
@@ -87,7 +93,7 @@ class Commande
         return $this->eau;
     }
 
-    public function setEau(int $eau): self
+    public function setEau(?int $eau): self
     {
         $this->eau = $eau;
 
@@ -99,9 +105,21 @@ class Commande
         return $this->boisson;
     }
 
-    public function setBoisson(int $boisson): self
+    public function setBoisson(?int $boisson): self
     {
         $this->boisson = $boisson;
+
+        return $this;
+    }
+
+    public function getUsers(): ?user
+    {
+        return $this->users;
+    }
+
+    public function setUsers(?user $users): self
+    {
+        $this->users = $users;
 
         return $this;
     }

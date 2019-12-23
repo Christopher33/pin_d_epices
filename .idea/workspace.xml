@@ -2,128 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d63b45f-57ac-4241-bece-b68db0e15d56" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.env.test" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/Pin_d_epices.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/console" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/phpunit" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/bootstrap.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/cache.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/dev/debug.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/dev/easy_log_handler.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/dev/monolog.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/dev/web_profiler.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/doctrine.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/doctrine_migrations.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/framework.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/mailer.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/notifier.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/prod/doctrine.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/prod/monolog.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/prod/routing.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/routing.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/sensio_framework_extra.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/test/framework.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/test/monolog.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/test/twig.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/test/validator.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/test/web_profiler.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/translation.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/twig.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/validator.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/routes.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/routes/annotations.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/routes/dev/framework.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/routes/dev/web_profiler.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/phpunit.xml.dist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/Apropos.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/boxMenu.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/footer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/header.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/inscription.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/nav.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/292.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/apropos.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/ardoise.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/bois.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/cafe-rond.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/cafe.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/cola.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/cola1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/cola2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/demicercle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/dessert-rond.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/donut.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/donut1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/facebook.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/fish.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/fish1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/fleche-bas.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/fontop.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/imgboisson.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/imgboisson1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/imgbonus.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/imgchris.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/imgdessert.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/imgdessert1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/imgplat.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/imgplat1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/imgtop.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/instagrame.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/logoallu.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/logoet.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/noirmarie.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/plat-rond.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/twitter.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/AdminController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/RegistrationController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/SwitchMenuController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Commande.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Dessert.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Plat.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/CommandeType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/RegistrationFormType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Kernel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Migrations/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20191215121117.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20191216151356.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20191216160123.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20191216160529.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20191220103011.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20191221123714.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/CommandeRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/DessertRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/PlatRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/UserRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/common/_footer.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/common/_header.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/common/_nav.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/common/_section.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/security/register.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/translations/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/CommandeController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20191223133138.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/commande/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/security/commande.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/security/recap.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/RegistrationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/RegistrationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Commande.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Commande.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/CommandeType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/CommandeType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20191221123714.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Migrations/Version20191223121809.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/common/_header.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/common/_header.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -282,6 +173,16 @@
       <recent name="C:\wamp64\www\Pin_d_epices" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="Version20191220103011.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Pin_d_epices/Migrations/Version20191220103011.php" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.Version20191220103011.php" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
       <list>
@@ -307,7 +208,7 @@
       <workItem from="1576409567888" duration="12530000" />
       <workItem from="1576757303572" duration="19459000" />
       <workItem from="1576836775995" duration="3309000" />
-      <workItem from="1576930779920" duration="1629000" />
+      <workItem from="1576930779920" duration="30648000" />
     </task>
     <servers />
   </component>
@@ -326,10 +227,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="70" key="#Notifications/0.0.1536.824@0.0.1536.824" timestamp="1576768858655" />
+    <state x="476" y="2" key="#PHP" timestamp="1577096665228">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="476" y="2" key="#PHP/0.0.1536.824@0.0.1536.824" timestamp="1577096665228" />
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1576768878744">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1576768878744" />
+    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1577116287690">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1577116287690" />
+    <state x="338" y="6" key="CommitChangelistDialog2" timestamp="1577117977729">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="338" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1577117977729" />
     <state x="826" y="178" key="FileChooserDialogImpl" timestamp="1576767243191">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -338,10 +251,26 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="541" y="279" key="Github.CreatePullRequestDialog/0.0.1536.824@0.0.1536.824" timestamp="1576769008215" />
-    <state x="942" y="229" key="NewPhpClassDialog" timestamp="1576760293547">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1577117995094">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="942" y="229" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1576760293547" />
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1577117995094" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1577117995094">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1577117995094" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1577117995093">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1577117995093" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1577117995094">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1577117995094" />
+    <state x="942" y="229" key="NewPhpClassDialog" timestamp="1577117253574">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="942" y="229" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1577117253574" />
     <state x="555" y="66" key="SettingsEditor" timestamp="1576779749752">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -354,10 +283,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1576930787620" />
-    <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1576782948922">
+    <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1577117932516">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1576782948922" />
+    <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1577117932516" />
     <state x="477" y="203" key="git4idea.merge.GitPullDialog" timestamp="1576769063803">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -370,9 +299,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="492" y="54" key="refactoring.ChangeSignatureDialog/0.0.1536.824@0.0.1536.824" timestamp="1576510511623" />
-    <state x="425" y="187" key="run.anything.popup" timestamp="1576768786584">
+    <state x="425" y="187" key="run.anything.popup" timestamp="1576935347994">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1576768786584" />
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1576935347994" />
   </component>
 </project>

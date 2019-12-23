@@ -18,7 +18,7 @@
 
     <div class="bt2">
         {% if is_granted("IS_AUTHENTICATED_FULLY") %}
-            <a href="#" class="bt">Commande</a>
+            <a href="{{ path('app_commande') }}" class="bt">Commande</a>
             <a href="{{ path('app_logout') }}" class="bt">Déconnexion</a>
         {% else %}
             <a href="{{ path('app_register') }}" class="bt">Inscription</a>
