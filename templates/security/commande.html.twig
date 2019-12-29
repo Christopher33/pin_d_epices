@@ -11,7 +11,7 @@
 
             {{ form_start(commande) }}
 
-            {{ form_row(commande.plat) }}
+            {{ form_widget(commande.plat)}}<div>{{ total }}</div>
             {{ form_row(commande.dessert) }}
             {{ form_row(commande.canette) }}
             {{ form_row(commande.eau) }}

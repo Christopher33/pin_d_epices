@@ -1,0 +1,1 @@
+var links = document.querySelectorAll('class de ma div avec le total')
