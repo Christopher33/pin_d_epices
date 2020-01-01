@@ -56,7 +56,7 @@ class User implements UserInterface
     private $phone;
 
     /**
-     * @ORM\OneToOne(targetEntity="App\Entity\Commande", cascade={"persist", "remove"})
+     * @ORM\OneToMany(targetEntity="App\Entity\Commande", mappedBy="user_id", cascade={"persist", "remove"})
      */
     private $Commande;
 

@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="fond-inscription">
+        <div class="placement_nav">
+            {% include 'common/_nav.html.twig' %}
+        </div>
+        <div class="inscription">
+            <h3>Commande</h3>
+
+            {{ form_start(commande) }}
+
+            {{ form_row(commande.plat)}}<div>{{ total }}</div>
+            {{ form_row(commande.dessert) }}
+            {{ form_row(commande.canette) }}
+            {{ form_row(commande.eau) }}
+            {{ form_row(commande.boisson) }}
+
+            <button type="submit">Valider</button>
+
+            {{ form_end(commande) }}
+        </div>
+
+        <div class="placement_footer">
+            {% include 'common/_footer.html.twig' %}
+        </div>
+
+
+
+        // TODO
+        // à appeler à chaque fois que plat change
+        $("#input_plat").change(function() {
+            // $.ajax('/calcul?plat='+commande.plat).success(
+
+                // mettre à jour total
+
+            )
+        });)
+
+    </div>
+
+{% endblock %}
+
