@@ -2,7 +2,13 @@
 
 namespace App\Controller;
 
+use App\Entity\User;
+use App\Form\UserType;
+use App\Repository\UserRepository;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\RedirectResponse;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
@@ -14,9 +20,9 @@ class SecurityController extends AbstractController
      */
     public function login(AuthenticationUtils $authenticationUtils): Response
     {
-        // if ($this->getUser()) {
-        //     return $this->redirectToRoute('target_path');
-        // }
+         if ($this->getUser()) {
+             return $this->redirectToRoute('index');
+         }
 
         // get the login error if there is one
         $error = $authenticationUtils->getLastAuthenticationError();
@@ -30,9 +36,35 @@ class SecurityController extends AbstractController
 
     /**
      * @Route("/logout", name="app_logout")
+     * @throws \Exception
      */
     public function logout()
     {
         throw new \Exception('This method can be blank - it will be intercepted by the logout key on your firewall');
+    }
+
+    /**
+     * @Route("/edit", name="edit")
+     * @param UserRepository $userRepository
+     * @param EntityManagerInterface $entityManager
+     * @param Request $request
+     * @return RedirectResponse|Response
+     */
+    public function profileEdit(UserRepository $userRepository, EntityManagerInterface $entityManager, Request $request)
+    {
+        $user = $this->getUser();
+        $userForm = $this->createForm(UserType::class, $user);
+        $userForm->handleRequest($request);
+
+            if ($userForm->isSubmitted() && $userForm->isValid()) {
+                $user = $userForm->getData();
+                $entityManager->persist($user);
+                $entityManager->flush();
+                $this->addFlash('success', 'Vous avez mis à jour votre profil');
+                return $this->redirectToRoute('index');
+            }
+        return $this->render('user/profil_edit.html.twig', [
+            'form' => $userForm->createView(),
+        ]);
     }
 }

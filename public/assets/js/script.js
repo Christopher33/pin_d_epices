@@ -1,8 +1,8 @@
 $(document).change(function () {
-    var totalPlat = $("#input_commande_plat");
+    var totalPlat = $('#commande_plat');
     $.ajax({
         method: "POST",
-        url: "{{ path('app_calcul') }}",
+        url: glgobalUrl,
         data: {id: totalPlat},
         success: function () {
             console.log(Response);

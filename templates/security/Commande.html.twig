@@ -6,7 +6,10 @@
         <div class="placement_nav">
             {% include 'common/_nav.html.twig' %}
         </div>
-        <div class="inscription">
+
+        {% if is_granted("IS_AUTHENTICATED_FULLY") %}
+
+            <div class="inscription">
             <h3>Commande</h3>
 
             {{ form_start(commande) }}
@@ -20,7 +23,10 @@
             <button type="submit">Valider</button>
 
             {{ form_end(commande) }}
-        </div>
+             </div>
+        {% else %}
+            <p>Connecte te toi enculer</p>
+        {% endif %}
 
         <div class="placement_footer">
             {% include 'common/_footer.html.twig' %}
@@ -29,7 +35,8 @@
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
-
+<script>    let glgobalUrl = "{{ path('app_calcul') }}"
+</script>
     <script src="{{ asset('assets/js/script.js') }}">
 
     </script>

@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    {% if is_granted("IS_AUTHENTICATED_FULLY") %}
+
+        <div class="form-div edit">
+        {{ form_start(form) }}
+        </div>
+        <div class="form-inside-div">
+            {{ form_errors(form.email) }}
+            {{ form_widget(form.email,{'attr': {
+                'placeholder': 'Email'
+            }}) }}
+        </div>
+
+        <div class="form-inside-div">
+            {{ form_errors(form.firstname) }}
+            {{ form_widget(form.firstname,{'attr': {
+                'placeholder': 'Prénom'
+            }}) }}
+        </div>
+        <div class="form-inside-div">
+            {{ form_errors(form.username) }}
+            {{ form_widget(form.username,{'attr': {
+                'placeholder': 'Nom'
+            }}) }}
+        </div>
+        <div class="form-inside-div">
+            {{ form_errors(form.adresse) }}
+            {{ form_widget(form.adresse,{'attr': {
+                'placeholder': 'Votre adresse'
+            }}) }}
+        </div>
+        <div class="form-inside-div">
+            {{ form_errors(form.phone) }}
+            {{ form_widget(form.phone,{'attr': {
+                'placeholder': 'Votre téléphone'
+            }}) }}
+        </div>
+        <div class="form-inside-div">
+            {{ form_errors(form.password) }}
+            {{ form_widget(form.password,{'attr': {
+                'placeholder': 'Votre nouveau mot de passe'
+            }}) }}
+        </div>
+        <button type="submit">Valider</button>
+
+        {{ form_end(form) }}
+
+    {% else %}
+        <p>Il faut te connectés</p>
+    {% endif %}
+
+{% endblock %}
