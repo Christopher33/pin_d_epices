@@ -57,16 +57,18 @@ class CommandeController extends AbstractController
      */
     public function calculPlat(Request $request, PlatRepository $platRepository)
     {
-        $request->getPathInfo();
-        $NbPlat = $request->query->getInt('plat');
-        $dayAjd = date('D');
-        $plat = $platRepository->findOneBy(['day' => $dayAjd]);
-        $price = $plat->getPrice();
-        $nombre = $NbPlat;
+        if($request->isXmlHttpRequest()) {
+            $request->getPathInfo();
+            $NbPlat = $request->query->getInt('plat');
+            $dayAjd = date('D');
+            $plat = $platRepository->findOneBy(['day' => $dayAjd]);
+            $price = $plat->getPrice();
+            $nombre = $NbPlat;
 
-        $total = $nombre * $price;
+            $total = $nombre * $price;
 
-        return new Response($total, 200);
+            return new Response($total, 200);
+        }
     }
 }
 
