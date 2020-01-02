@@ -1,23 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1d63b45f-57ac-4241-bece-b68db0e15d56" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Controller/UserController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/UserType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/security/admin.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/user/_delete_form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/user/_form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/user/edit.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/user/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/user/profil_edit.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/user/show.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/js/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/common/_header.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/common/_header.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/security/Commande.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/Commande.html.twig" afterDir="false" />
-    </list>
+    <list default="true" id="1d63b45f-57ac-4241-bece-b68db0e15d56" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -233,7 +217,7 @@
       <workItem from="1576757303572" duration="19459000" />
       <workItem from="1576836775995" duration="3309000" />
       <workItem from="1576930779920" duration="32285000" />
-      <workItem from="1577184045920" duration="72732000" />
+      <workItem from="1577184045920" duration="73253000" />
     </task>
     <task id="LOCAL-00001" summary="mise a jour du 23/12 enreistrement de commande + id user OK">
       <created>1577118062291</created>
@@ -263,7 +247,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577966857626</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="mise a jour du 29/12 travail sur la valeur par defaut du nombre de plat dans le formulaire de commande, ECHEC">
+      <created>1577987279437</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1577987279437</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -296,10 +287,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1577969118830" />
-    <state x="338" y="6" key="CommitChangelistDialog2" timestamp="1577966857141">
+    <state x="338" y="6" key="CommitChangelistDialog2" timestamp="1577987279000">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="338" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1577966857141" />
+    <state x="338" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1577987279000" />
     <state x="545" y="325" key="ComposerInitDialogKey" timestamp="1577717431519">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -356,10 +347,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="93" y="93" width="1350" height="638" key="ShowDiffWithBranchDialog/0.0.1536.824@0.0.1536.824" timestamp="1577725625535" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1576769036064">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1577987585428">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1576769036064" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1577987585428" />
     <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1577968872364">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -368,10 +359,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1577184050033" />
-    <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1577725498289">
+    <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1577987647481">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1577725498289" />
+    <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1577987647481" />
     <state x="463" y="17" width="609" height="789" key="find.popup" timestamp="1577725470110">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
