@@ -1,5 +1,40 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <span>Bravo tu as commandé!</span>
+
+    <div class="fond-inscription">
+    <div class="placement_nav">
+        {% include 'common/_nav.html.twig' %}
+    </div>
+
+    {% if is_granted("IS_AUTHENTICATED_FULLY") %}
+
+    <div class="inscription">
+        <h3>Détail sur la commande</h3>
+        <p>Le règlement ce fera à la livraison ainsi que le choix des boissons. <br>Mode de payement accepté:</p>
+        <ul>
+            <li>Carte bancaire</li>
+            <li>Ticket restaurant</li>
+            <li>Espèce</li>
+        </ul>
+        <h3>Résumé de commande</h3>
+
+        <p>Nombre de plat {{ rendu.plat }} : {{ totPlat }} €</p>
+        <p>Nombre de dessert {{ rendu.dessert }} : {{ totDessert }} €</p>
+        <p>Nombre de canette {{ rendu.canette }} : {{ totCanette }} €</p>
+        <p>Nombre de eau {{ rendu.eau }} : {{ totEau }} €</p>
+        <p>Nombre de boisson {{ rendu.boisson }} : {{ totBoisson }} €</p>
+
+        <p>Total : {{ total }} €</p>
+
+    </div>
+    {% else %}
+        <p>Connecte te toi enculer</p>
+    {% endif %}
+    </div>
+    <div class="form_footer">
+        {% include 'common/_footer.html.twig' %}
+    </div>
+
+
 {% endblock %}

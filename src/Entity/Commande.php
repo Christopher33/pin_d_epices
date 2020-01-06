@@ -18,8 +18,8 @@ class Commande
     private $id;
 
     /**
-     * @ORM\Column(type="integer", nullable=true, options={"default": 2})
-     * @Assert\PositiveOrZero
+     * @ORM\Column(type="integer", nullable=true)
+     * @Assert\Positive
      */
     private $plat;
 

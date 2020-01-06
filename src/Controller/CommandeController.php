@@ -5,6 +5,7 @@ namespace App\Controller;
 
 use App\Entity\Commande;
 use App\Form\CommandeType;
+use App\Repository\DessertRepository;
 use App\Repository\PlatRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -17,7 +18,7 @@ class CommandeController extends AbstractController
     /**
      * @Route("/commande", name="app_commande")
      */
-    public function commande(Request $request, EntityManagerInterface $entityManager, PlatRepository $platRepository)
+    public function commande(Request $request, EntityManagerInterface $entityManager, PlatRepository $platRepository, DessertRepository $dessertRepository)
     {
 
         $commande = new Commande();
@@ -25,30 +26,43 @@ class CommandeController extends AbstractController
         $form->handleRequest($request);
 
         $request->getPathInfo();
-        $NbPlat = 1;
         $dayAjd = date('D');
+
         $plat = $platRepository->findOneBy(['day' => $dayAjd]);
-        $price = $plat->getPrice();
-        $nombre = $NbPlat;
+        $pricePlat = $plat->getPrice();
 
-        $total = $nombre * $price;
-
-        //dd($NbPlat);
+        $dessert = $dessertRepository->findOneBy(['day' => $dayAjd]);
+        $priceDessert = $dessert->getPrice();
 
         if ($form->isSubmitted() && $form->isValid()) {
 
             $commande->setUser($this->getUser());
 
+            $a = $commande->getPlat() * $pricePlat;
+            $b = $commande->getDessert() * $priceDessert;
+            $c = $commande->getCanette() * 2;
+            $d = $commande->getEau() * 1.5;
+            $e = $commande->getBoisson() * 1.5;
+
+            $total = $a + $b + $c + $d + $e;
+
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($commande);
             $entityManager->flush();
 
-            return $this->render('security/Recap.html.twig');
+            return $this->render('security/Recap.html.twig', [
+                'rendu' => $commande,
+                'total' => $total,
+                'totPlat' => $a,
+                'totDessert' => $b,
+                'totCanette' => $c,
+                'totEau' => $d,
+                'totBoisson' => $e
+                ]);
         }
 
         return $this->render('security/commande.html.twig', [
             'commande' => $form->createView(),
-            'total' => $total
         ]);
     }
 

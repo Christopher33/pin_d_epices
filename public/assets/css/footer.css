@@ -21,10 +21,107 @@ footer{
 }
 
 .size_img_reseau{
-    width: 25%;
+    width: 15%;
     height: 100%;
 }
 
 .row{
     margin-right: 15px;
+}
+
+.box_logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.logo_eteint{
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: 220px;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo_allume{
+    width: auto;
+    height: 220px;
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    animation: logo 10s infinite;
+}
+@keyframes logo{
+    0%{
+        opacity: 1;
+    }
+    32%{
+        opacity: 1;
+    }
+    33%{
+        opacity: 0;
+    }
+    34%{
+        opacity: 1;
+    }
+    35%{
+        opacity: 0;
+    }
+    36%{
+        opacity: 1;
+    }
+    66%{
+        opacity: 1;
+    }
+    67%{
+        opacity: 0;
+    }
+    68%{
+        opacity: 1;
+    }
+    69%{
+        opacity: 0;
+    }
+    79%{
+        opacity: 0;
+    }
+    80%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+#popup{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+    padding: 50px;
+    background-color: #565656;
+    color: white;
+    visibility: hidden;
+    opacity: 0;
+    transition: .5s;
+}
+#popup.active{
+    top: 50%;
+    visibility: visible;
+    opacity: 1;
+    transition: .5s;
+}
+#blur.active{
+    filter: blur(10px);
+    pointer-events: none;
+    user-select: none;
 }

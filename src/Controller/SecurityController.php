@@ -11,6 +11,7 @@ use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 
 class SecurityController extends AbstractController
@@ -50,20 +51,29 @@ class SecurityController extends AbstractController
      * @param Request $request
      * @return RedirectResponse|Response
      */
-    public function profileEdit(UserRepository $userRepository, EntityManagerInterface $entityManager, Request $request)
+    public function profileEdit(EntityManagerInterface $entityManager, Request $request, UserPasswordEncoderInterface $passwordEncoder)
     {
         $user = $this->getUser();
+
+//        dd($user);
+
         $userForm = $this->createForm(UserType::class, $user);
         $userForm->handleRequest($request);
 
             if ($userForm->isSubmitted() && $userForm->isValid()) {
+                $user->setPassword(
+                    $passwordEncoder->encodePassword(
+                        $user,
+                        $userForm->get('plainPassword')->getData()
+                    )
+                );
                 $user = $userForm->getData();
                 $entityManager->persist($user);
                 $entityManager->flush();
-                $this->addFlash('success', 'Vous avez mis à jour votre profil');
+
                 return $this->redirectToRoute('index');
             }
-        return $this->render('user/profil_edit.html.twig', [
+        return $this->render('security/profil_edit.html.twig', [
             'form' => $userForm->createView(),
         ]);
     }

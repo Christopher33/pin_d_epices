@@ -1,11 +1,17 @@
+
 <footer>
     <div class="row placement_lien_reseau">
-        <div class="col-7">
+        <div class="col-4">
             <ul>
-                <li class="espace_lien_footer"><div class="zoom"><a href="#">Mention légales</a></div></li>
+                <li class="espace_lien_footer"><div class="zoom"><a href="#" onclick="toggle()">Mention légales</a></div></li>
                 <li class="espace_lien_footer"><div class="zoom"><a href="#">Me contacter</a></div></li>
                 <li class="espace_lien_footer"><div class="zoom"><a href="#">Newsletter</a></div></li>
             </ul>
+        </div>
+        <div class="col-5 box_logo">
+            <img class="logo_eteint" src="{{ asset('assets/img/logoet.png') }}">
+            <img class="logo_allume" src="{{ asset('assets/img/logoallu.png') }}">
+
         </div>
 
         <div class="col-3 taille_reseau">
@@ -15,3 +21,11 @@
         </div>
     </div>
 </footer>
+<script type="text/javascript">
+    function toggle() {
+        const blur = document.getElementById('blur');
+        blur.classList.toggle('active');
+        const popup = document.getElementById('popup');
+        popup.classList.toggle('active');
+    }
+</script>

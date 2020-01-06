@@ -1,29 +1,32 @@
 .fond-inscription{
-    background-color: rgba(0, 0, 0, 0.64);
-    height: 130vh;
+    background: url("../img/img_form.jpg") fixed;
+    background-size: cover;
+    height: 100vh;
     width: 100%;
     position: relative;
     z-index: 1;
     top: 0;
     left: 0;
-    overflow: auto;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .inscription{
-    padding: 30px;
-    background-color: #718C00;
+    padding: 40px;
+    background-color: #36917e;
+    opacity: 0.95;
+    border: solid 2px white;
+    border-radius: 5px;
+    box-shadow: 0 0 1vw #cfcfcf;
     position: absolute;
-    top: 20%;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
-
+    transform: translate(-50%, -50%);
 }
-div input{
-    display: flex;
-}
+/*div input{*/
+/*    display: flex;*/
+/*}*/
 
 .cote_a_cote{
     display: flex;
@@ -36,8 +39,9 @@ div input{
     width: 100%;
 }
 
-.placement_footer{
+
+.form_footer{
     position: absolute;
-    bottom: 0;
+    bottom: -30vh;
     left: 0;
 }

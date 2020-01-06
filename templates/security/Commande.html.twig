@@ -12,33 +12,33 @@
             <div class="inscription">
             <h3>Commande</h3>
 
-            {{ form_start(commande) }}
+                {{ form_start(commande) }}
 
-            {{ form_row(commande.plat)}}<div>{{ total }}</div>
-            {{ form_row(commande.dessert) }}
-            {{ form_row(commande.canette) }}
-            {{ form_row(commande.eau) }}
-            {{ form_row(commande.boisson) }}
+                {{ form_row(commande.plat)}}
+                {{ form_row(commande.dessert) }}
+                {{ form_row(commande.canette) }}
+                {{ form_row(commande.eau) }}
+                {{ form_row(commande.boisson) }}
 
-            <button type="submit">Valider</button>
+                <button type="submit">Valider</button>
 
-            {{ form_end(commande) }}
+                {{ form_end(commande) }}
+
              </div>
+
         {% else %}
             <p>Connecte te toi enculer</p>
         {% endif %}
 
-        <div class="placement_footer">
-            {% include 'common/_footer.html.twig' %}
-        </div>
-
+    </div>
+    <div class="form_footer">
+        {% include 'common/_footer.html.twig' %}
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
-<script>    let glgobalUrl = "{{ path('app_calcul') }}"
-</script>
-    <script src="{{ asset('assets/js/script.js') }}">
-
+    <script>    let glgobalUrl = "{{ path('app_calcul') }}"
+    </script>
+        <script src="{{ asset('assets/js/script.js') }}">
     </script>
 
 {% endblock %}

@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h3>Commande Index</h3>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Plat</th>
+                <th>Dessert</th>
+                <th>Canette</th>
+                <th>Eau</th>
+                <th>Boisson</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for commande in commandes %}
+            <tr>
+                <td>{{ commande.id }}</td>
+                <td>{{ commande.plat }}</td>
+                <td>{{ commande.dessert }}</td>
+                <td>{{ commande.canette }}</td>
+                <td>{{ commande.eau }}</td>
+                <td>{{ commande.boisson }}</td>
+                <td>
+                    <a class="" href="{{ path('commande_show', {'id': commande.id}) }}">show</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="7">no records found</td>
+            </tr>
+        {% endfor %}
+
+        {% for user in users %}
+            <tr>
+                <td>{{ user.id }}</td>
+                <td>{{ user.firstname }}</td>
+                <td>{{ user.username }}</td>
+                <td>{{ user.adresse }}</td>
+                <td>{{ user.phone }}</td>
+            </tr>
+        {% endfor %}
+
+        </tbody>
+    </table>
+
+{% endblock %}
