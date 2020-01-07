@@ -31,15 +31,7 @@
         {% endif %}
 
     </div>
-    <div class="form_footer">
-        {% include 'common/_footer.html.twig' %}
-    </div>
-
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
-    <script>    let glgobalUrl = "{{ path('app_calcul') }}"
-    </script>
-        <script src="{{ asset('assets/js/script.js') }}">
-    </script>
+    {% include 'common/_footer.html.twig' %}
 
 {% endblock %}
 

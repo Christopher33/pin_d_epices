@@ -33,14 +33,14 @@ class AdminController extends AbstractController
     public function index(CommandeRepository $commandeRepository, UserRepository $userRepository): Response
     {
         $id_command = $commandeRepository->findAll();
-        $user = $userRepository->findAll();
+//        $user = $userRepository->findAll();
 
 //        $user = $userRepository->findAll();
 //        $id_command = $commandeRepository->findOneBy(['user' => $user]);
 
         return $this->render('commande/index.html.twig', [
             'commandes' => $id_command,
-            'users' => $user
+//            'users' => $user
         ]);
     }
 
