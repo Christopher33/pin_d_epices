@@ -10,50 +10,53 @@
         {% if is_granted("IS_AUTHENTICATED_FULLY") %}
 
         <div class="inscription">
-            <h3>Modifier mon profil</h3>
+            <span class="titre_form">Modifier mon profil</span>
 
             <div class="form-div edit">
             </div>
                 <div class="form-inside-div">
                     {{ form_errors(form.email) }}
                     <label for="user_email" class="required">Votre adresse mail</label>
-                    {{ form_widget(form.email, {'attr': {'class':'popo'}}) }}
+                    {{ form_widget(form.email, {'attr': {'class':'input_form'}}) }}
                 </div>
             <div class="form-inside-div">
                 {{ form_errors(form.username) }}
                 <label for="user_username" class="required">Votre nom</label>
-                {{ form_widget(form.username, {'attr': {'class':'popo'}}) }}
+                {{ form_widget(form.username, {'attr': {'class':'input_form'}}) }}
             </div>
                 <div class="form-inside-div">
                     {{ form_errors(form.firstname) }}
                     <label for="user_firstname" class="required">Votre prénom</label>
-                    {{ form_widget(form.firstname, {'attr': {'class':'popo'}}) }}
+                    {{ form_widget(form.firstname, {'attr': {'class':'input_form'}}) }}
                 </div>
 
                 <div class="form-inside-div">
                     {{ form_errors(form.adresse) }}
                     <label for="user_adresse" class="required">Adresse de livraison</label>
-                    {{ form_widget(form.adresse, {'attr': {'class':'popo'}}) }}
+                    {{ form_widget(form.adresse, {'attr': {'class':'input_form'}}) }}
                 </div>
                 <div class="form-inside-div">
                     {{ form_errors(form.phone) }}
                     <label for="user_phone" class="required">Votre téléphone</label>
-                    {{ form_widget(form.phone, {'attr': {'class':'popo'}}) }}
+                    {{ form_widget(form.phone, {'attr': {'class':'input_form'}}) }}
                 </div>
                 <div class="form-inside-div">
                     <label for="user_password" class="required">Votre nouveau mot de passe</label>
-                    {{ form_widget(form.plainPassword, {'attr': {'class':'popo'}}) }}
+                    {{ form_widget(form.plainPassword, {'attr': {'class':'input_form'}}) }}
                 </div>
-    {#            <div class="form-inside-div">#}
-    {#                <label for="user_confirm_password" class="required">Confirmez mot de passe</label>#}
-    {#                {{ form_widget(form.confirm_password, {'attr': {'class':'popo'}}) }}#}
-    {#            </div>#}
-                <button type="submit">Valider</button>
+{#            <div class="form-inside-div">#}
+{#                <label for="user_confirm_password" class="required">Confirmez mot de passe</label>#}
+{#                {{ form_widget(form.confirm_password, {'attr': {'class':'input_form'}}) }}#}
+{#            </div>#}
+
+                <div class="bt_valid&cancel_place">
+                    <button class="bt_valid" type="submit">Valider</button>
+                    <a class="bt_cancel" href="{{ path('index') }}" >Annuler</a>
+                </div>
 
         </div>
     </div>
-    {% else %}
-        <p>Il faut te connectés</p>
+    {% else %}<p>Il faut te connectés</p>
     {% endif %}
 
     {% include 'common/_footer.html.twig' %}

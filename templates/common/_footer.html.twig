@@ -1,31 +1,21 @@
-
 <footer>
     <div class="row placement_lien_reseau">
         <div class="col-4">
             <ul>
-                <li class="espace_lien_footer"><div class="zoom"><a href="#" onclick="toggle()">Mention légales</a></div></li>
-                <li class="espace_lien_footer"><div class="zoom"><a href="#">Me contacter</a></div></li>
-                <li class="espace_lien_footer"><div class="zoom"><a href="#">Newsletter</a></div></li>
+                <li class="espace_lien_footer"><div class="zoom"><a href="#" onclick="mentionL()">Mention légales</a></div></li>
+                <li class="espace_lien_footer"><div class="zoom"><a href="#" onclick="travaux()">Me contacter</a></div></li>
+                <li class="espace_lien_footer"><div class="zoom"><a href="#" onclick="travaux()">Newsletter</a></div></li>
             </ul>
         </div>
         <div class="col-5 box_logo">
-            <img class="logo_eteint" src="{{ asset('assets/img/logoet.png') }}">
-            <img class="logo_allume" src="{{ asset('assets/img/logoallu.png') }}">
-
+            <img class="logo_eteint" src="{{ asset('assets/img/logoet.png') }}" alt="logo" title="logo">
+            <img class="logo_allume" src="{{ asset('assets/img/logoallu.png') }}" alt="logo" title="logo">
         </div>
 
         <div class="col-3 taille_reseau">
-            <div class="size_img_reseau zoom"><img class="resp" src="{{ asset('assets/img/facebook.png') }}" alt="#"></div>
-            <div class="size_img_reseau zoom"><img class="resp" src="{{ asset('assets/img/instagrame.png') }}" alt="#"></div>
-            <div class="size_img_reseau zoom"><img class="resp" src="{{ asset('assets/img/twitter.png') }}" alt="#"></div>
+            <div class="size_img_reseau zoom"><a href="#" onclick="travaux()"><img class="resp" src="{{ asset('assets/img/facebook.png') }}" alt="#"></a></div>
+            <div class="size_img_reseau zoom"><a href="#" onclick="travaux()"><img class="resp" src="{{ asset('assets/img/instagrame.png') }}" alt="#"></a></div>
+            <div class="size_img_reseau zoom"><a href="#" onclick="travaux()"><img class="resp" src="{{ asset('assets/img/twitter.png') }}" alt="#"></a></div>
         </div>
     </div>
 </footer>
-{#<script type="text/javascript">#}
-{#    function toggle() {#}
-{#        const blur = document.getElementById('blur');#}
-{#        blur.classList.toggle('active');#}
-{#        const popup = document.getElementById('popup');#}
-{#        popup.classList.toggle('active');#}
-{#    }#}
-{#</script>#}

@@ -35,16 +35,77 @@ h2{
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
-h3{
-    font-size: 2.5em;
-    color: white;
-}
-
 h4{
     padding: 15px 10px;
 }
 
 h5{
     text-align: center;
+    color: white;
+}
+label{
+    margin-bottom: -0.5rem;
+}
+/*flou sur page d'acceuil à l'activation du JS pour fenetre popup*/
+.blur.active{
+    filter: blur(10px);
+    pointer-events: none;
+    user-select: none;
+}
+.travaux{
+    width: 40%;
+    height: auto;
+    padding: 50px;
+    background-color: #565656;
+    border-radius: 4px;
+    color: white;
+    font-size: 14px;
+    display: none;
+    opacity: 0;
+    transition: .5s;
+}
+.travaux.active{
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 1;
+    transition: .5s;
+}
+.place_bt_close_travaux{
+    position: absolute;
+    top: 15%;
+    right: 5%;
+}
+.place_bt_close_mention{
+    position: absolute;
+    bottom: 4%;
+    right: 5%;
+}
+.bt_close{
+    position: relative;
+    cursor: pointer;
+    margin: 10px;
+}
+.bt_close_l{
+    background-color: black;
+    height: 2px;
+    width: 16px;
+    transform: translate(-50%, -50%) rotate(45deg) ;
+    position: absolute;
+}
+.bt_close_r{
+    background-color: black;
+    height: 2px;
+    width: 16px;
+    transform: translate(-50%, -50%) rotate(-45deg) ;
+    position: absolute;
+}
+
+@media screen and (min-width: 150px) and (max-width: 800px){
+    .travaux{
+        width: 60%;
+    }
 }

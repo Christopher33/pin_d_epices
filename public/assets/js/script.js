@@ -1,8 +1,15 @@
-function toggle() {
-    var blur = document.getElementById('blur');
+function mentionL() {
+    let blur = document.querySelector('.blur');
     blur.classList.toggle('active');
-    var popup = document.getElementById('popup');
-    popup.classList.toggle('active');
+    let mention = document.querySelector('.mention');
+    mention.classList.toggle('active');
+}
+
+function travaux() {
+    let blur = document.querySelector('.blur');
+    blur.classList.toggle('active');
+    let travaux = document.querySelector('.travaux');
+    travaux.classList.toggle('active');
 }
 
 // $(document).change(function () {

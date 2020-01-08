@@ -2,14 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d63b45f-57ac-4241-bece-b68db0e15d56" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/templates/travaux.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/footer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/inscription.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/inscription.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/nav.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/nav.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/assets/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/js/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdminController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/commande/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/commande/_form.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/commande/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/commande/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/common/_footer.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/common/_footer.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/common/_header.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/common/_header.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/common/_nav.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/common/_nav.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/common/_section.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/common/_section.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/mentionLegal.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mentionLegal.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/security/Commande.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/Commande.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/security/Recap.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/Recap.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/security/profil_edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/profil_edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/security/register.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/register.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,16 +181,16 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../pin_d_epices_bis/public" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\Pin_d_epices\templates" />
       <recent name="C:\wamp64\www\pin_d_epices_bis\public" />
       <recent name="C:\wamp64\www\pin_d_epices_bis" />
       <recent name="C:\wamp64\www\pin_d_epices_bis\src" />
       <recent name="C:\wamp64\www\Pin_d_epices\public\assets\img" />
-      <recent name="C:\wamp64\www\Pin_d_epices" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\Pin_d_epices\templates\security" />
@@ -227,7 +240,7 @@
       <workItem from="1576757303572" duration="19459000" />
       <workItem from="1576836775995" duration="3309000" />
       <workItem from="1576930779920" duration="32285000" />
-      <workItem from="1577184045920" duration="138794000" />
+      <workItem from="1577184045920" duration="164959000" />
     </task>
     <task id="LOCAL-00001" summary="mise a jour du 23/12 enreistrement de commande + id user OK">
       <created>1577118062291</created>
@@ -285,7 +298,21 @@
       <option name="project" value="LOCAL" />
       <updated>1578334013607</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="mise a jour du 06/01 travail sur le récap commande, OK et mention légal + js OK">
+      <created>1578392873981</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1578392873981</updated>
+    </task>
+    <task id="LOCAL-00010" summary="mise a jour du 06/01 travail sur le récap commande, OK et mention légal + js OK">
+      <created>1578392909594</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1578392909594</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -334,10 +361,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1578311050546" />
-    <state x="338" y="6" key="CommitChangelistDialog2" timestamp="1578392882442">
+    <state x="338" y="6" key="CommitChangelistDialog2" timestamp="1578392909019">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="338" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1578392882442" />
+    <state x="338" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1578392909019" />
     <state x="545" y="325" key="ComposerInitDialogKey" timestamp="1577717431519">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

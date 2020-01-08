@@ -13,17 +13,19 @@
     <link rel="stylesheet" href="{{ asset('assets/css/header.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/inscription.css') }}">
     <link href="https://fonts.googleapis.com/css?family=Bad+Script|Lobster|Montserra&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     <title>Pin d'épices</title>
 
 </head>
 
-<div id="blur">
+<div class="blur">
     {% block body %}
 
     {% endblock %}
 </div>
 
 {% include 'mentionLegal.html.twig' %}
+{% include 'travaux.html.twig' %}
 <script type="text/javascript" src="{{ asset('assets/js/script.js') }}"></script>
 
 </html>

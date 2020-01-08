@@ -18,13 +18,13 @@
             {% endif %}
 
             <div class="inscription">
-                <h3>Connexion</h3>
+                <span class="titre_form">Connexion</span><br>
 
                 <label for="inputEmail">Adresse mail : </label>
-                <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" required autofocus>
+                <input type="email" placeholder="Votre adresse mail" value="{{ last_username }}" name="email" id="inputEmail" class="input_form" required autofocus>
 
                 <label for="inputPassword">Mot de passe : </label>
-                <input type="password" name="password" id="inputPassword" class="form-control" required>
+                <input type="password" placeholder="Votre mot de passe" name="password" id="inputPassword" class="input_form" required>
 
                 <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
 
@@ -39,7 +39,10 @@
                     </div>
                 #}
 
-                <button class="#" type="submit">Connexion</button>
+                <div class="bt_valid&cancel_place">
+                    <button class="bt_valid" type="submit">Valider</button>
+                    <a class="bt_cancel" href="{{ path('index') }}" >Annuler</a>
+                </div>
             </div>
         </form>
     </div>
