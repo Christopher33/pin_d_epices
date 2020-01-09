@@ -1,5 +1,23 @@
 /* header */
 
+.row{
+    width: 95%;
+}
+.col-12{
+    padding: 0;
+}
+.big_box{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .imgtop{
     background: url("../img/fontop.jpg") center;
     background-size: cover;
@@ -7,14 +25,6 @@
     width: 100%;
     position: relative;
 }
-
-.pec{
-    position: absolute;
-    top: 16%;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
 .pe{
     font-family: 'Lobster', cursive;
     color: rgb(119, 0, 46);
@@ -36,30 +46,11 @@
         opacity: 1;
     }
 }
-
-.boite{
-    position: absolute;
-    top: 54%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-
 .textacroch{
     color: rgb(78, 35, 0);
-    font-size: 2em;
+    font-size: 2vw;
     font-family: 'Bad Script', cursive;
 }
-
-/* bouton de connexion et d'insccription */
-.bt2{
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    display: flex;
-    transform: translate(-50%, -50%);
-}
-
 .bt{
     color: rgba(78, 35, 0, 0.8);
     padding: 15px 30px;
@@ -69,10 +60,48 @@
     background-color: rgba(224, 191, 159, 0.6);
     font-size: 20px;
 }
-
 .bt:hover{
     color: rgb(224, 191, 159);
     text-shadow: none;
     background-color: rgba(78, 35, 0, 0.6);
     transition: all .2s ease;
+}
+@media screen and (max-width: 1100px){
+    .pe{
+        font-size: 12vw;
+    }
+    .textacroch{
+        font-size: 3vw;
+    }
+    .bt{
+        padding: 14px 20px;
+        font-size: 18px;
+        margin: 0 14px;
+    }
+}
+@media screen and (max-width: 1000px){
+    .pe{
+        font-size: 13vw;
+    }
+    .textacroch{
+        font-size: 4vw;
+    }
+    .bt{
+        padding: 14px 16px;
+        font-size: 16px;
+        margin: 0 13px;
+    }
+}
+@media screen and (max-width: 527px){
+    .pe{
+        font-size: 18vw;
+    }
+    .textacroch{
+        font-size: 5vw;
+    }
+    .bt{
+        padding: 12px 12px;
+        font-size: 12px;
+        margin: 0 3px;
+    }
 }

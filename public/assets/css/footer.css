@@ -1,6 +1,7 @@
 footer{
     display: flex;
     align-items: center;
+    justify-content: center;
     height: 30vh;
     width: 100%;
     background-color: rgb(37, 37, 37);
@@ -9,6 +10,7 @@ footer{
 .placement_lien_reseau{
     display: flex;
     align-items: center;
+    justify-content: space-around;
 }
 
 .espace_lien_footer{
@@ -23,10 +25,6 @@ footer{
 .size_img_reseau{
     width: 15%;
     height: 100%;
-}
-
-.row{
-    margin-right: 15px;
 }
 
 .box_logo{
@@ -132,7 +130,11 @@ footer{
     background-color: rgba(0, 0, 0, 0.6);
     font-size: 16px;
 }
-
+@media screen and (max-width: 767px){
+    .box_logo{
+        display: none;
+    }
+}
 @media screen and (min-width: 150px) and (max-width: 480px){
     .mention{
         font-size: 10px;

@@ -21,3 +21,17 @@
     align-items: center;
     color: white;
 }
+
+@media screen and (max-width: 720px){
+    .menu_apropos{
+        background: url("../img/small_apropos.jpg") fixed no-repeat;
+    }
+}
+@media screen and (max-width: 380px){
+    .text_apropos p{
+        font-size: 12px;
+    }
+    .text_apropos h1{
+        font-size: 20px;
+    }
+}

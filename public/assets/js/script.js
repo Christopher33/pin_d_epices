@@ -12,6 +12,13 @@ function travaux() {
     travaux.classList.toggle('active');
 }
 
+// window.onclick = function(event) {
+//     if (event.target === blur()) {
+//         travaux.style.display = "none";
+//     }
+// };
+
+
 // $(document).change(function () {
 //     var totalPlat = $('#commande_plat');
 //     $.ajax({

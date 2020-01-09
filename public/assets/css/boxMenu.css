@@ -8,7 +8,6 @@
     align-items: center;
     justify-content: center;
 }
-
 .barre_menu{
     display: flex;
     justify-content: center;
@@ -130,7 +129,7 @@ h5 ul{
 .back-box{
     height: 400px;
     width: 300px;
-    padding: 8% 20px 0 20px;
+    padding: 6% 20px 0 20px;
     position: absolute;
     z-index: 10;
     top: 0;
