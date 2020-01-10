@@ -2,9 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\User;
 use App\Form\UserType;
-use App\Repository\UserRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\RedirectResponse;
@@ -46,27 +44,26 @@ class SecurityController extends AbstractController
 
     /**
      * @Route("/edit", name="edit")
-     * @param UserRepository $userRepository
      * @param EntityManagerInterface $entityManager
      * @param Request $request
+     * @param UserPasswordEncoderInterface $passwordEncoder
      * @return RedirectResponse|Response
      */
     public function profileEdit(EntityManagerInterface $entityManager, Request $request, UserPasswordEncoderInterface $passwordEncoder)
     {
         $user = $this->getUser();
 
-//        dd($user);
-
         $userForm = $this->createForm(UserType::class, $user);
         $userForm->handleRequest($request);
 
-            if ($userForm->isSubmitted() && $userForm->isValid()) {
-                $user->setPassword(
-                    $passwordEncoder->encodePassword(
-                        $user,
-                        $userForm->get('plainPassword')->getData()
-                    )
-                );
+        if ($userForm->isSubmitted() && $userForm->isValid()) {
+            // encode the password
+            $user->setPassword(
+                $passwordEncoder->encodePassword(
+                    $user,
+                    $userForm->get('password')->getData()
+                )
+            );
                 $user = $userForm->getData();
                 $entityManager->persist($user);
                 $entityManager->flush();

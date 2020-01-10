@@ -36,32 +36,10 @@ class User implements UserInterface
      */
     private $password;
 
-//    /**
-////     * @Assert\NotBlank(message="ne peut pas etre vide")
-////     * @Assert\EqualTo(propertyPath="password")
-////     */
-////    private $confirm_password;
-////
-////    /**
-////     * @return mixed
-////     */
-////    public function getConfirmPassword()
-////    {
-////        return $this->confirm_password;
-////    }
-////
-////    /**
-////     * @param mixed $confirm_password
-////     */
-////    public function setConfirmPassword($confirm_password): void
-////    {
-////        $this->confirm_password = $confirm_password;
-////    }
-
     /**
-     * @ORM\Column(type="string", length=255)
+     * @Assert\EqualTo(propertyPath="password", message="Votre mot de passe ne doit pas être différent")
      */
-    private $username;
+    private $confirm_password;
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -82,6 +60,11 @@ class User implements UserInterface
      * @ORM\OneToMany(targetEntity="App\Entity\Commande", mappedBy="user_id", cascade={"persist", "remove"})
      */
     private $Commande;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $name;
 
     public function getId(): ?int
     {
@@ -158,14 +141,7 @@ class User implements UserInterface
     public function eraseCredentials()
     {
         // If you store any temporary, sensitive data on the user, clear it here
-        // $this->plainPassword = null;
-    }
-
-    public function setUsername(string $username): self
-    {
-        $this->username = $username;
-
-        return $this;
+        // $this->password = null;
     }
 
     public function getFirstname(): ?string
@@ -214,5 +190,32 @@ class User implements UserInterface
         $this->Commande = $Commande;
 
         return $this;
+    }
+
+    public function getName(): ?string
+    {
+        return $this->name;
+    }
+
+    public function setName(string $name): self
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getConfirmPassword()
+    {
+        return $this->confirm_password;
+    }
+    /**
+     * @param mixed $confirm_password
+     */
+    public function setConfirmPassword($confirm_password): void
+    {
+        $this->confirm_password = $confirm_password;
     }
 }

@@ -8,6 +8,22 @@
     align-items: center;
     justify-content: center;
 }
+.reponsive_box{
+    width: 95%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+@media screen and (max-width: 980px){
+    .page_menu{
+        height: 100%;
+    }
+    .reponsive_box{
+        display: block;
+        padding: 80px 0 30px 0;
+    }
+}
 .barre_menu{
     display: flex;
     justify-content: center;
@@ -21,7 +37,6 @@
     top: 0;
     left: 0;
 }
-
 .fleche{
     height: auto;
     width: 8%;
@@ -30,19 +45,16 @@
     left: 50%;
     transform: translateX(-50%);
 }
-
 .box{
     height: 400px;
     width: 300px;
     position: relative;
     overflow: hidden;
-    margin: 0 auto;
-    margin-top: 4%;
+    margin: 4% auto 0;
     border-radius: 5px;
     box-shadow: 1vw 1vw 4vw black;
     border: solid 2px rgba(250, 250, 250, 0.8);
 }
-
 .top-box{
     height: 500px;
     line-height: 500px;
@@ -59,7 +71,6 @@
     transition: 1s ease;
     font-size: 30px;
 }
-
 .plat{
     position: absolute;
     z-index: 13;
@@ -70,7 +81,6 @@
 }
 
 /* gestion de l'image box */
-
 .img-plat, .img-dessert, .img-boisson{
     height: 500px;
     width: 500px;
@@ -81,7 +91,6 @@
     transform: translate(-50%, -50%);
     transition:  1s ease;
 }
-
 .box:hover .img-plat, .box:hover .img-dessert, .box:hover .img-boisson{
     height: 70px;
     width: 70px;
@@ -91,7 +100,6 @@
     left: 84%;
     opacity: 0;
 }
-
 .box:hover .top-box{
     height: 70px;
     width: 70px;
@@ -102,30 +110,25 @@
     font-size: 14px;
     opacity: 0.2;
 }
-
 .box:hover .chache{
     opacity: 0;
 }
 
 /* placement de la liste de choix des boissons */
-
 li ul li{
     list-style-type: square;
     text-align: left;
     font-size: 12px;
 }
-
 h5 ul li{
     padding: 2px 20px;
     list-style-type: square;
     list-style-position: inside;
     text-align: left;
 }
-
 h5 ul{
     padding-top: 10px;
 }
-
 .back-box{
     height: 400px;
     width: 300px;
@@ -138,19 +141,15 @@ h5 ul{
     color: white;
     text-align: left;
 }
-
 .back-plat{
     background-color: teal;
 }
-
 .back-dessert{
     background-color: rgb(161, 102, 14);
 }
-
 .back-boisson{
     background-color: rgb(119, 18, 68);
 }
-
 .PP{
     padding: 10px;
     height: auto;
@@ -158,7 +157,6 @@ h5 ul{
     display: flex;
     justify-content: space-between;
 }
-
 .clic-box{
     padding: 10px 15px;
     background-color: white;
@@ -172,27 +170,23 @@ h5 ul{
     transition: .5s ease;
     box-shadow: 5px 5px  1vw black;
 }
-
 .lien-plat{
     text-decoration: none;
     color: teal;
     transition: .5s ease;
     font-size: 14px;
 }
-
-.clic-box:hover .lien-plat{
+.clic-box:hover .lien-plat {
     text-decoration: none;
     color: teal;
     font-size: 16px;
 }
-
 .lien-dessert{
     text-decoration: none;
     color: rgb(161, 102, 14);
     transition: .5s ease;
     font-size: 14px;
 }
-
 .clic-box:hover .lien-dessert{
     text-decoration: none;
     color: rgb(161, 102, 14);

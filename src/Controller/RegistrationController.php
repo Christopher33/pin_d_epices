@@ -27,11 +27,11 @@ class RegistrationController extends AbstractController
         $form->handleRequest($request);
 
              if ($form->isSubmitted() && $form->isValid()) {
-                // encode the plain password
+                // encode the password
                 $user->setPassword(
                     $passwordEncoder->encodePassword(
                         $user,
-                        $form->get('plainPassword')->getData()
+                        $form->get('password')->getData()
                     )
                 );
 
@@ -41,7 +41,7 @@ class RegistrationController extends AbstractController
 
                 // do anything else you need here, like send an email
 
-                return $this->redirectToRoute('index');
+                return $this->redirectToRoute('app_login');
             }
 
         return $this->render('security/register.html.twig', [

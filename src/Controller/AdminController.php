@@ -5,7 +5,6 @@ namespace App\Controller;
 
 
 use App\Entity\Commande;
-use App\Form\CommandeType;
 use App\Repository\CommandeRepository;
 use App\Repository\UserRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -27,50 +26,21 @@ class AdminController extends AbstractController
 
         return $this->render('security/admin.html.twig');
     }
+
     /**
      * @Route("/coco", name="commande_index", methods={"GET"})
+     * @param CommandeRepository $commandeRepository
+     * @param UserRepository $userRepository
+     * @return Response
      */
     public function index(CommandeRepository $commandeRepository, UserRepository $userRepository): Response
     {
-        $id_command = $commandeRepository->findAll();
-//        $user = $userRepository->findAll();
-
-//        $user = $userRepository->findAll();
-//        $id_command = $commandeRepository->findOneBy(['user' => $user]);
+        $date = date('d / m');
+        $commande = $commandeRepository->findAll();
 
         return $this->render('commande/index.html.twig', [
-            'commandes' => $id_command,
-//            'users' => $user
-        ]);
-    }
-
-    /**
-     * @Route("/{id}", name="commande_show", methods={"GET"})
-     */
-    public function show(Commande $commande): Response
-    {
-        return $this->render('commande/show.html.twig', [
-            'commande' => $commande,
-        ]);
-    }
-
-    /**
-     * @Route("/{id}/edit", name="commande_edit", methods={"GET","POST"})
-     */
-    public function edit(Request $request, Commande $commande): Response
-    {
-        $form = $this->createForm(CommandeType::class, $commande);
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-            $this->getDoctrine()->getManager()->flush();
-
-            return $this->redirectToRoute('commande_index');
-        }
-
-        return $this->render('commande/edit.html.twig', [
-            'commande' => $commande,
-            'form' => $form->createView(),
+            'commandes' => $commande,
+            'date' => $date
         ]);
     }
 

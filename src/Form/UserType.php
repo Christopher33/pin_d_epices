@@ -19,11 +19,11 @@ class UserType extends AbstractType
     {
         $builder
             ->add('email', EmailType::class)
-            ->add('username', TextType::class)
+            ->add('name', TextType::class)
             ->add('firstname', TextType::class)
             ->add('adresse', TextType::class)
             ->add('phone', IntegerType::class)
-            ->add('plainPassword', PasswordType::class, [
+            ->add('password', PasswordType::class, [
                 // instead of being set onto the object directly,
                 // this is read and encoded in the controller
                 'mapped' => false,
