@@ -1,3 +1,7 @@
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('assets/css/header.css') }}">
+{% endblock %}
+
 <header class="imgtop">
 
     {% include 'common/_nav.html.twig' %}
@@ -8,6 +12,7 @@
             <span class="pe">Pin d'épices</span>
         </div>
     </div>
+
     <div class="row text-center pt-2 pb-4">
         <div class="col-12 smooth">
             {% if is_granted("IS_AUTHENTICATED_FULLY") %}
@@ -17,6 +22,7 @@
             {% endif %}
         </div>
     </div>
+
     <div class="row text-center pt-3 pb-3">
         <div class="col-12">
                 {% if is_granted("IS_AUTHENTICATED_FULLY") %}

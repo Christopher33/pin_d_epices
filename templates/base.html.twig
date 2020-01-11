@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+
+{#    Required meta tags    #}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+{#    Bootstrap version mini    #}
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{ asset('assets/css/boxMenu.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/Apropos.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/nav.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/footer.css') }}">
+
+{#    My base CSS web site  #}
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/header.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/form.css') }}">
+
+{#  Import CSS on only web page call    #}
+    {% block stylesheets %}{% endblock %}
+
+{#    TYPO front google.font#}
     <link href="https://fonts.googleapis.com/css?family=Bad+Script|Lobster|Montserra&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+
+{#    Web site title    #}
     <title>Pin d'épices</title>
+    <link rel="icon" type="image/png" href="../public/assets/img/small_logo.png">
 
 </head>
-
-<div class="blur">
     {% block body %}
 
     {% endblock %}
-</div>
-
-{% include 'mentionLegal.html.twig' %}
-{% include 'travaux.html.twig' %}
-<script type="text/javascript" src="{{ asset('assets/js/script.js') }}"></script>
-
 </html>

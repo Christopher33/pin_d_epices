@@ -2,23 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d63b45f-57ac-4241-bece-b68db0e15d56" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20200109152222.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Entity/UserTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/small_logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/css/boxMenu.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/boxMenu.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/css/form.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/form.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/css/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/header.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/RegistrationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/RegistrationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/RegistrationFormType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/RegistrationFormType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/UserType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/UserType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/commande/_delete_form.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/commande/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/commande/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/commande/show.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/common/_section.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/common/_section.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/commande/_form.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/common/_footer.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/common/_footer.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/common/_header.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/common/_header.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/common/_nav.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/common/_nav.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/common/_section.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/security/Commande.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/Commande.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/security/Recap.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/Recap.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/security/profil_edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/profil_edit.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/security/register.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/register.html.twig" afterDir="false" />
     </list>
@@ -194,17 +190,17 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary" value="PHPUnit" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Form" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/assets/img" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="two.files.diff.last.used.folder" value="$PROJECT_DIR$/src/Form" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\Pin_d_epices\public\assets\img" />
       <recent name="C:\wamp64\www\Pin_d_epices\src\Form" />
       <recent name="C:\wamp64\www\Pin_d_epices\templates" />
       <recent name="C:\wamp64\www\pin_d_epices_bis\public" />
       <recent name="C:\wamp64\www\pin_d_epices_bis" />
-      <recent name="C:\wamp64\www\pin_d_epices_bis\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\Pin_d_epices\templates\security" />
@@ -258,7 +254,7 @@
       <workItem from="1576757303572" duration="19459000" />
       <workItem from="1576836775995" duration="3309000" />
       <workItem from="1576930779920" duration="32285000" />
-      <workItem from="1577184045920" duration="210243000" />
+      <workItem from="1577184045920" duration="225989000" />
     </task>
     <task id="LOCAL-00001" summary="mise a jour du 23/12 enreistrement de commande + id user OK">
       <created>1577118062291</created>
@@ -344,7 +340,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578581411470</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="mise a jour du 10/01 travail sur le responsive OK, confirm password OK, récup user dans commande admin OK">
+      <created>1578664851290</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1578664851290</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -368,7 +371,8 @@
     <MESSAGE value="mise a jour du 06/01 travail sur le récap commande, OK et mention légal + js OK" />
     <MESSAGE value="mise a jour du 08/01 travail sur les formulaire en CSS avec leurs responsices OK" />
     <MESSAGE value="mise a jour du 09/01 travail sur le responsive OK, dernier point a faire sur les menus." />
-    <option name="LAST_COMMIT_MESSAGE" value="mise a jour du 09/01 travail sur le responsive OK, dernier point a faire sur les menus." />
+    <MESSAGE value="mise a jour du 10/01 travail sur le responsive OK, confirm password OK, récup user dans commande admin OK" />
+    <option name="LAST_COMMIT_MESSAGE" value="mise a jour du 10/01 travail sur le responsive OK, confirm password OK, récup user dans commande admin OK" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="70" key="#Inspections" timestamp="1578662655738">
@@ -403,10 +407,11 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="559" y="91" key="#index.html.twig/0.0.1536.824@0.0.1536.824" timestamp="1578652776633" />
-    <state x="338" y="6" key="CommitChangelistDialog2" timestamp="1578581410961">
+    <state x="338" y="6" key="CommitChangelistDialog2" timestamp="1578774650070">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="338" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1578581410961" />
+    <state x="338" y="6" key="CommitChangelistDialog2/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1578774650070" />
+    <state x="338" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1578664850466" />
     <state x="545" y="325" key="ComposerInitDialogKey" timestamp="1577717431519">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -455,9 +460,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="718" y="184" key="RollbackChangesDialog/0.0.1536.824@0.0.1536.824" timestamp="1577968768651" />
-    <state x="555" y="66" key="SettingsEditor" timestamp="1577709871011">
+    <state x="234" y="62" key="SettingsEditor" timestamp="1578759718303">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="234" y="62" key="SettingsEditor/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1578759718303" />
     <state x="555" y="66" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1577709871011" />
     <state x="93" y="93" width="1350" height="638" key="ShowDiffWithBranchDialog" timestamp="1577725625535">
       <screen x="0" y="0" width="1536" height="824" />
@@ -467,10 +473,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1536.824@0.0.1536.824" timestamp="1577990018786" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1578581424784">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1578664866280">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1578581424784" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1578664866280" />
     <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1577968872364">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

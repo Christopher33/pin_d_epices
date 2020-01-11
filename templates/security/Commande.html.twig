@@ -1,39 +1,51 @@
 {% extends 'base.html.twig' %}
 
+{% block stylesheets %}
+
+    <link rel="stylesheet" href="{{ asset('assets/css/form.css') }}">
+{% endblock %}
+
 {% block body %}
+    <div class="blur">
 
-    <div class="fond-inscription">
-        <div class="placement_nav">
-            {% include 'common/_nav.html.twig' %}
+        <div class="fond-inscription">
+            <div class="placement_nav">
+                {% include 'common/_nav.html.twig' %}
+            </div>
+            {% if is_granted("IS_AUTHENTICATED_FULLY") %}
+
+                <div class="inscription">
+                <span class="titre_form">Commande</span>
+
+                    {{ form_start(commande) }}
+
+                        {{ form_row(commande.plat, {'attr': {'class':'input_form'}})}}
+                        {{ form_row(commande.dessert, {'attr': {'class':'input_form'}}) }}
+                        {{ form_row(commande.canette, {'attr': {'class':'input_form'}}) }}
+                        {{ form_row(commande.eau, {'attr': {'class':'input_form'}}) }}
+                        {{ form_row(commande.boisson, {'attr': {'class':'input_form'}}) }}
+
+                        <div class="bt_valid&cancel_place">
+                            <button class="bt_valid" type="submit">Valider</button>
+                            <a class="bt_cancel" href="{{ path('index') }}" >Annuler</a>
+                        </div>
+
+                    {{ form_end(commande) }}
+
+                 </div>
+
+            {% else %}
+                <p>Connecte te toi enculer</p>
+            {% endif %}
+
         </div>
-        {% if is_granted("IS_AUTHENTICATED_FULLY") %}
-
-            <div class="inscription">
-            <span class="titre_form">Commande</span>
-
-                {{ form_start(commande) }}
-
-                {{ form_row(commande.plat, {'attr': {'class':'input_form'}})}}
-                {{ form_row(commande.dessert, {'attr': {'class':'input_form'}}) }}
-                {{ form_row(commande.canette, {'attr': {'class':'input_form'}}) }}
-                {{ form_row(commande.eau, {'attr': {'class':'input_form'}}) }}
-                {{ form_row(commande.boisson, {'attr': {'class':'input_form'}}) }}
-
-                <div class="bt_valid&cancel_place">
-                    <button class="bt_valid" type="submit">Valider</button>
-                    <a class="bt_cancel" href="{{ path('index') }}" >Annuler</a>
-                </div>
-
-                {{ form_end(commande) }}
-
-             </div>
-
-        {% else %}
-            <p>Connecte te toi enculer</p>
-        {% endif %}
-
+        {% include 'common/_footer.html.twig' %}
     </div>
-    {% include 'common/_footer.html.twig' %}
+
+    {% include 'mentionLegal.html.twig' %}
+    {% include 'travaux.html.twig' %}
+
+    <script type="text/javascript" src="{{ asset('assets/js/script.js') }}"></script>
 
 {% endblock %}
 

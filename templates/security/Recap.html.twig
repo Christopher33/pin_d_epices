@@ -1,44 +1,58 @@
 {% extends 'base.html.twig' %}
 
+{% block stylesheets %}
+
+    <link rel="stylesheet" href="{{ asset('assets/css/form.css') }}">
+{% endblock %}
+
 {% block body %}
+    <div class="blur">
 
-    <div class="fond-inscription">
+        <div class="fond-inscription">
 
-    <div class="placement_nav">
-        {% include 'common/_nav.html.twig' %}
-    </div>
+            <div class="placement_nav">
+                {% include 'common/_nav.html.twig' %}
+            </div>
 
-    {% if is_granted("IS_AUTHENTICATED_FULLY") %}
+            {% if is_granted("IS_AUTHENTICATED_FULLY") %}
 
-    <div class="inscription">
+            <div class="inscription">
 
-        <span class="titre_form">Votre commande</span>
+                <span class="titre_form">Votre commande</span>
 
-        <p class="margin_titre_form">{{ rendu.plat }} plat à {{ totPlat }} €</p>
-        <p>{{ rendu.dessert }} dessert à {{ totDessert }} €</p>
-        <p>{{ rendu.canette }} canette à {{ totCanette }} €</p>
-        <p>{{ rendu.eau }} bouteille d'eau {{ totEau }} €</p>
-        <p>{{ rendu.boisson }} boisson chaude à {{ totBoisson }} €</p>
+                <p class="margin_titre_form">{{ rendu.plat }} plat à {{ totPlat }} €</p>
+                <p>{{ rendu.dessert }} dessert à {{ totDessert }} €</p>
+                <p>{{ rendu.canette }} canette à {{ totCanette }} €</p>
+                <p>{{ rendu.eau }} bouteille d'eau {{ totEau }} €</p>
+                <p>{{ rendu.boisson }} boisson chaude à {{ totBoisson }} €</p>
 
-        <p class="align_total">Total : {{ total }} €</p>
-        <a class="bt_cancel" href="{{ path('index') }}" >Retour</a>
+                <p class="align_total">Total : {{ total }} €</p>
+                <a class="bt_cancel" href="{{ path('index') }}" >Retour</a>
 
 
-    </div>
-        <div class="reglement">
-            <p>
-                Le règlement ce fera à la livraison ainsi que le choix des boissons. <br>
-                Mode de payement accepté : Carte bancaire, ticket restaurant, espèce.
-            </p>
+            </div>
+                <div class="reglement">
+                    <p>
+                        Livraison prévue entre 12h et 13h30 au plus tard.
+                        Le règlement ce fera à la livraison ainsi que le choix des boissons. <br>
+                        Mode de payement accepté : Carte bancaire, ticket restaurant, espèce.
+                    </p>
+                </div>
+
+            {% else %}
+                <p>Connecte te toi enculer</p>
+            {% endif %}
         </div>
 
-    {% else %}
-        <p>Connecte te toi enculer</p>
-    {% endif %}
-    </div>
-    <div class="form_footer">
-        {% include 'common/_footer.html.twig' %}
+        <div class="form_footer">
+            {% include 'common/_footer.html.twig' %}
+        </div>
+
     </div>
 
+    {% include 'mentionLegal.html.twig' %}
+    {% include 'travaux.html.twig' %}
+
+    <script type="text/javascript" src="{{ asset('assets/js/script.js') }}"></script>
 
 {% endblock %}

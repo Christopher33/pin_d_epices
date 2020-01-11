@@ -1,8 +1,129 @@
 {% extends 'base.html.twig' %}
 
-{% block body %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('assets/css/boxMenu.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/Apropos.css') }}">
+{% endblock %}
 
-    {% include 'common/_header.html.twig' %}
-    {% include 'common/_section.html.twig' %}
+{% block body %}
+    <div class="blur">
+
+        {% include 'common/_header.html.twig' %}
+        <main>
+            <div class="page_menu">
+
+                <div class="barre_menu" id="menu">
+                    <div class="fleche">
+                        <a href="#menu"><img class="resp" src="{{ asset('assets/img/demicercle.png') }}" alt="#"></a>
+                    </div>
+                    <span>Menu du jour</span>
+                </div>
+
+                <div class="reponsive_box">
+                    <div class="box">
+                        <img class="img-plat" src="{{ asset('assets/img/plat-rond.png') }}" alt="img_plat">
+                        <div class="top-box">
+                            <span class="plat">Plat</span>
+                        </div>
+                        <div class="back-box back-plat">
+                            <h4>{{ plat.name }}</h4>
+                            <p>
+                                {{ plat.description }}
+                            </p>
+                            <div class="PP">
+                                <span>Poids: {{ plat.poids }}gr</span>
+                                <span>Prix: {{ plat.price }}€</span>
+                            </div>
+                        </div>
+                        <div class="clic-box">
+                            <a href="#" class="lien-plat" onclick="travaux()">Voir la recette</a>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <img class="img-dessert" src="{{ asset('assets/img/dessert-rond.png') }}" alt="img_dessert">
+                        <div class="top-box">
+                            <span class="plat">Dessert</span>
+                        </div>
+                        <div class="back-box back-dessert">
+                            <h4>{{ dessert.name }}</h4>
+                            <p>
+                                {{ dessert.description }}
+                            </p>
+                            <div class="PP">
+                                <span>Poids: {{ dessert.poids }}gr</span>
+                                <span>Prix: {{ dessert.price }}€</span>
+                            </div>
+                        </div>
+                        <div class="clic-box">
+                            <a href="#" class="lien-dessert" onclick="travaux()">Voir la recette</a>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <img class="img-boisson" src="{{ asset('assets/img/cafe-rond.png') }}" alt="img_boisson">
+                        <div class="top-box chache">
+                            <span class="plat">Boissons</span>
+                        </div>
+                        <div class="back-box back-boisson">
+                            <h5>Cannette 33cl : 2€
+                                <ul>
+                                    <li>Coca</li>
+                                    <li>Limonade</li>
+                                    <li>Orangina</li>
+                                    <li>Icetea</li>
+                                    <li>Jus d'orange</li>
+                                </ul>
+                            </h5>
+                            <h5>Eau 50cl : 1,50€
+                                <ul>
+                                    <li>Evian</li>
+                                    <li>Badoit</li>
+                                </ul>
+                            </h5>
+                            <h5>Boisson chaude : 1,50€
+                                <ul>
+                                    <li>Expresso</li>
+                                    <li>Café allongé</li>
+                                    <li>Thé au choix</li>
+                                    <li>Infusion au choix</li>
+                                </ul>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="menu_apropos">
+                <div class="barre_apropos" id="a_propos">
+                    <span>A propos</span>
+                </div>
+                <div class="container">
+                    <div class="row text_apropos">
+                        <div class="col-12 col-md-7 pl-3">
+                            <h1 class="my-3">Le concept de Pin d'épices</h1>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem a necessitatibus dignissimos.
+                                Ex aspernatur exercitationem assumenda ratione voluptatem vitae asperiores nihil numquam quas reprehenderit,
+                                facilis accusamus ipsam, fugit eum unde? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Vero sapiente distinctio aut numquam molestias dolorum incidunt eum. Incidunt minima eveniet asperiores,
+                                eos assumenda aut accusamus aspernatur magnam iste aperiam modi.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                {% include 'common/_footer.html.twig' %}
+
+            </div>
+        </main>
+    </div>
+
+    {% include 'mentionLegal.html.twig' %}
+    {% include 'travaux.html.twig' %}
+
+    <script type="text/javascript" src="{{ asset('assets/js/script.js') }}"></script>
 
 {% endblock %}

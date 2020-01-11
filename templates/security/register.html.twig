@@ -1,38 +1,50 @@
 {% extends 'base.html.twig' %}
 
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('assets/css/form.css') }}">
+{% endblock %}
+
+
 {% block body %}
+    <div class="blur">
 
-    <div class="fond-inscription">
-        <div class="placement_nav">
-            {% include 'common/_nav.html.twig' %}
-        </div>
-        <div class="inscription">
-            <span class="titre_form">Inscription</span>
+        <div class="fond-inscription">
+            <div class="placement_nav">
+                {% include 'common/_nav.html.twig' %}
+            </div>
+            <div class="inscription">
+                <span class="titre_form">Inscription</span>
 
-            {{ form_start(registrationForm) }}
+                {{ form_start(registrationForm) }}
 
-                {{ form_row(registrationForm.firstname, {'label': 'Prénom', 'attr' : {'placeholder' : 'Votre prénom', 'class':'input_form'}}) }}
-                {{ form_row(registrationForm.name, {'label': 'Nom', 'attr': {'placeholder': 'Votre nom', 'class':'input_form'}}) }}
+                    {{ form_row(registrationForm.firstname, {'label': 'Prénom', 'attr' : {'placeholder' : 'Votre prénom', 'class':'input_form'}}) }}
+                    {{ form_row(registrationForm.name, {'label': 'Nom', 'attr': {'placeholder': 'Votre nom', 'class':'input_form'}}) }}
 
-                {{ form_row(registrationForm.adresse, {'label': 'Adresse du lieu de travail', 'attr': {'placeholder': 'Adresse pour la livraison', 'class':'input_form'}}) }}
+                    {{ form_row(registrationForm.adresse, {'label': 'Adresse du lieu de travail', 'attr': {'placeholder': 'Adresse pour la livraison', 'class':'input_form'}}) }}
 
-                {{ form_row(registrationForm.email, {'label': 'Votre Email', 'attr' : {'placeholder': 'Votre adresse mail', 'class':'input_form'}}) }}
-                {{ form_row(registrationForm.phone, {'label': 'Numéro de téléphone', 'attr': {'placeholder': 'Votre numéro de téléphone', 'class':'input_form'}}) }}
+                    {{ form_row(registrationForm.email, {'label': 'Votre Email', 'attr' : {'placeholder': 'Votre adresse mail', 'class':'input_form'}}) }}
+                    {{ form_row(registrationForm.phone, {'label': 'Numéro de téléphone', 'attr': {'placeholder': 'Votre numéro de téléphone', 'class':'input_form'}}) }}
 
-                {{ form_row(registrationForm.password, {'label': 'Mot de passe', 'attr': {'placeholder': 'Veuillez créer votre mot de passe', 'class':'input_form'}}) }}
-                {{ form_row(registrationForm.confirm_password, {'attr': {'placeholder': 'Confirmez votre mot de passe', 'class':'input_form'}}) }}
-            <div class="bt_valid&cancel_place">
-                <button class="bt_valid" type="submit">Valider</button>
-                <a class="bt_cancel" href="{{ path('index') }}" >Annuler</a>
+                    {{ form_row(registrationForm.password, {'label': 'Mot de passe', 'attr': {'placeholder': 'Veuillez créer votre mot de passe', 'class':'input_form'}}) }}
+                    {{ form_row(registrationForm.confirm_password, {'attr': {'placeholder': 'Confirmez votre mot de passe', 'class':'input_form'}}) }}
+
+                    <div class="bt_valid&cancel_place">
+                        <button class="bt_valid" type="submit">Valider</button>
+                        <a class="bt_cancel" href="{{ path('index') }}" >Annuler</a>
+                    </div>
+
+                {{ form_end(registrationForm) }}
             </div>
 
-            {{ form_end(registrationForm) }}
         </div>
 
+        {% include 'common/_footer.html.twig' %}
     </div>
 
-    {% include 'common/_footer.html.twig' %}
+    {% include 'mentionLegal.html.twig' %}
+    {% include 'travaux.html.twig' %}
 
+    <script type="text/javascript" src="{{ asset('assets/js/script.js') }}"></script>
 
 {% endblock %}
 
