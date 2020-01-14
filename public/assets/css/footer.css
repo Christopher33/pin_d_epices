@@ -57,6 +57,7 @@ footer{
     opacity: 1;
     animation: logo 10s infinite;
 }
+
 @keyframes logo{
     0%{
         opacity: 1;
@@ -112,6 +113,7 @@ footer{
     opacity: 0;
     transition: .5s;
 }
+
 .mention.active{
     display: flex;
     position: absolute;
@@ -121,6 +123,7 @@ footer{
     opacity: 1;
     transition: .5s;
 }
+
 /*bouton de fermeture de la fenetre mention légal*/
 .bt_close_mention{
     color: rgba(207, 207, 207, 0.8);
@@ -130,11 +133,13 @@ footer{
     background-color: rgba(0, 0, 0, 0.6);
     font-size: 16px;
 }
+
 @media screen and (max-width: 767px){
     .box_logo{
         display: none;
     }
 }
+
 @media screen and (min-width: 150px) and (max-width: 480px){
     .mention{
         font-size: 10px;

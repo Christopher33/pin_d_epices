@@ -15,6 +15,7 @@
     align-items: center;
     justify-content: space-around;
 }
+
 @media screen and (max-width: 980px){
     .page_menu{
         height: 100%;
@@ -24,6 +25,7 @@
         padding: 80px 0 30px 0;
     }
 }
+
 .barre_menu{
     display: flex;
     justify-content: center;
@@ -37,6 +39,7 @@
     top: 0;
     left: 0;
 }
+
 .fleche{
     height: auto;
     width: 8%;
@@ -45,6 +48,7 @@
     left: 50%;
     transform: translateX(-50%);
 }
+
 .box{
     height: 400px;
     width: 300px;
@@ -71,6 +75,7 @@
     transition: 1s ease;
     font-size: 30px;
 }
+
 .plat{
     position: absolute;
     z-index: 13;
@@ -91,6 +96,7 @@
     transform: translate(-50%, -50%);
     transition:  1s ease;
 }
+
 .box:hover .img-plat, .box:hover .img-dessert, .box:hover .img-boisson{
     height: 70px;
     width: 70px;
@@ -100,6 +106,7 @@
     left: 84%;
     opacity: 0;
 }
+
 .box:hover .top-box{
     height: 70px;
     width: 70px;
@@ -110,6 +117,7 @@
     font-size: 14px;
     opacity: 0.2;
 }
+
 .box:hover .chache{
     opacity: 0;
 }
@@ -120,15 +128,18 @@ li ul li{
     text-align: left;
     font-size: 12px;
 }
+
 h5 ul li{
     padding: 2px 20px;
     list-style-type: square;
     list-style-position: inside;
     text-align: left;
 }
+
 h5 ul{
     padding-top: 10px;
 }
+
 .back-box{
     height: 400px;
     width: 300px;
@@ -141,15 +152,19 @@ h5 ul{
     color: white;
     text-align: left;
 }
+
 .back-plat{
     background-color: teal;
 }
+
 .back-dessert{
     background-color: rgb(161, 102, 14);
 }
+
 .back-boisson{
     background-color: rgb(119, 18, 68);
 }
+
 .PP{
     padding: 10px;
     height: auto;
@@ -157,6 +172,7 @@ h5 ul{
     display: flex;
     justify-content: space-between;
 }
+
 .clic-box{
     padding: 10px 15px;
     background-color: white;
@@ -170,23 +186,27 @@ h5 ul{
     transition: .5s ease;
     box-shadow: 5px 5px  1vw black;
 }
+
 .lien-plat{
     text-decoration: none;
     color: teal;
     transition: .5s ease;
     font-size: 14px;
 }
+
 .clic-box:hover .lien-plat {
     text-decoration: none;
     color: teal;
     font-size: 16px;
 }
+
 .lien-dessert{
     text-decoration: none;
     color: rgb(161, 102, 14);
     transition: .5s ease;
     font-size: 14px;
 }
+
 .clic-box:hover .lien-dessert{
     text-decoration: none;
     color: rgb(161, 102, 14);

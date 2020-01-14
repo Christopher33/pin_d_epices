@@ -27,6 +27,7 @@
         background: url("../img/small_apropos.jpg") fixed no-repeat;
     }
 }
+
 @media screen and (max-width: 380px){
     .text_apropos p{
         font-size: 12px;

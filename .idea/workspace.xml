@@ -2,21 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d63b45f-57ac-4241-bece-b68db0e15d56" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/assets/img/small_logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/security_checker.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/DessertType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/PlatType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/dessert/_form.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/dessert/edit.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/dessert/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/plat/_form.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/plat/edit.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/plat/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Pin_d_epices.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Pin_d_epices.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/commande/_form.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/common/_footer.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/common/_footer.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/common/_header.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/common/_header.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/common/_nav.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/common/_nav.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/common/_section.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/security/Commande.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/Commande.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/security/Recap.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/Recap.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/security/profil_edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/profil_edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/security/register.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/register.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/Apropos.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/Apropos.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/boxMenu.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/boxMenu.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/footer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/form.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/form.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,6 +179,7 @@
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-grapheme" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
       <path value="$PROJECT_DIR$/vendor/symfony/notifier" />
+      <path value="$PROJECT_DIR$/vendor/sensiolabs/security-checker" />
     </include_path>
   </component>
   <component name="ProjectId" id="1V197XixhfHFpHRXznHLaeV3ucN" />
@@ -254,7 +261,7 @@
       <workItem from="1576757303572" duration="19459000" />
       <workItem from="1576836775995" duration="3309000" />
       <workItem from="1576930779920" duration="32285000" />
-      <workItem from="1577184045920" duration="225989000" />
+      <workItem from="1577184045920" duration="237957000" />
     </task>
     <task id="LOCAL-00001" summary="mise a jour du 23/12 enreistrement de commande + id user OK">
       <created>1577118062291</created>
@@ -347,7 +354,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578664851290</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="mise a jour du 10/01 travail sur le responsive OK, confirm password OK, récup user dans commande admin OK">
+      <created>1578774706169</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1578774706169</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -399,18 +413,19 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="310" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1578309890554" />
-    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1578311050546">
+    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1578912336917">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1578912336917" />
     <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1578311050546" />
     <state x="559" y="91" key="#index.html.twig" timestamp="1578652776633">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="559" y="91" key="#index.html.twig/0.0.1536.824@0.0.1536.824" timestamp="1578652776633" />
-    <state x="338" y="6" key="CommitChangelistDialog2" timestamp="1578774650070">
+    <state x="338" y="6" key="CommitChangelistDialog2" timestamp="1578774705625">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="338" y="6" key="CommitChangelistDialog2/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1578774650070" />
+    <state x="338" y="6" key="CommitChangelistDialog2/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1578774705625" />
     <state x="338" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1578664850466" />
     <state x="545" y="325" key="ComposerInitDialogKey" timestamp="1577717431519">
       <screen x="0" y="0" width="1536" height="824" />
@@ -460,10 +475,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="718" y="184" key="RollbackChangesDialog/0.0.1536.824@0.0.1536.824" timestamp="1577968768651" />
-    <state x="234" y="62" key="SettingsEditor" timestamp="1578759718303">
+    <state x="234" y="62" key="SettingsEditor" timestamp="1578910810490">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="234" y="62" key="SettingsEditor/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1578759718303" />
+    <state x="234" y="62" key="SettingsEditor/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1578910810490" />
     <state x="555" y="66" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1577709871011" />
     <state x="93" y="93" width="1350" height="638" key="ShowDiffWithBranchDialog" timestamp="1577725625535">
       <screen x="0" y="0" width="1536" height="824" />
@@ -473,9 +488,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1536.824@0.0.1536.824" timestamp="1577990018786" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1578664866280">
+    <state x="161" y="82" width="1221" height="614" key="Vcs.Push.Dialog.v2" timestamp="1578774727017">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="161" y="82" width="1221" height="614" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1578774727017" />
     <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1578664866280" />
     <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1577968872364">
       <screen x="0" y="0" width="1536" height="824" />
