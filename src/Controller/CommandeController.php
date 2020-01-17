@@ -34,32 +34,32 @@ class CommandeController extends AbstractController
         $dessert = $dessertRepository->findOneBy(['day' => $dayAjd]);
         $priceDessert = $dessert->getPrice();
 
-        if ($form->isSubmitted() && $form->isValid()) {
+            if ($form->isSubmitted() && $form->isValid()) {
 
-            $commande->setUser($this->getUser());
+                $commande->setUser($this->getUser());
 
-            $a = $commande->getPlat() * $pricePlat;
-            $b = $commande->getDessert() * $priceDessert;
-            $c = $commande->getCanette() * 2;
-            $d = $commande->getEau() * 1.5;
-            $e = $commande->getBoisson() * 1.5;
+                $a = $commande->getPlat() * $pricePlat;
+                $b = $commande->getDessert() * $priceDessert;
+                $c = $commande->getCanette() * 2;
+                $d = $commande->getEau() * 1.5;
+                $e = $commande->getBoisson() * 1.5;
 
-            $total = $a + $b + $c + $d + $e;
+                $total = $a + $b + $c + $d + $e;
 
-            $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->persist($commande);
-            $entityManager->flush();
+                $entityManager = $this->getDoctrine()->getManager();
+                $entityManager->persist($commande);
+                $entityManager->flush();
 
-            return $this->render('security/Recap.html.twig', [
-                'rendu' => $commande,
-                'total' => $total,
-                'totPlat' => $a,
-                'totDessert' => $b,
-                'totCanette' => $c,
-                'totEau' => $d,
-                'totBoisson' => $e
-                ]);
-        }
+                return $this->render('security/Recap.html.twig', [
+                    'rendu' => $commande,
+                    'total' => $total,
+                    'totPlat' => $a,
+                    'totDessert' => $b,
+                    'totCanette' => $c,
+                    'totEau' => $d,
+                    'totBoisson' => $e
+                    ]);
+            }
 
         return $this->render('security/commande.html.twig', [
             'commande' => $form->createView(),

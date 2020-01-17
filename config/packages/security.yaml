@@ -30,9 +30,6 @@ security:
             logout:
                 path: app_logout
                 # where to redirect after logout
-                # target: app_any_route
-
-
 
     access_control:
         # or require ROLE_ADMIN or IS_AUTHENTICATED_FULLY for /admin*

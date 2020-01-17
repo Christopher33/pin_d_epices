@@ -16,7 +16,6 @@ class PlatType extends AbstractType
             ->add('description')
             ->add('price')
             ->add('poids')
-            ->add('day')
         ;
     }
 

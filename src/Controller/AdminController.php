@@ -1,8 +1,6 @@
 <?php
 
-
 namespace App\Controller;
-
 
 use App\Entity\Commande;
 use App\Entity\Dessert;
@@ -39,8 +37,10 @@ class AdminController extends AbstractController
      * @param UserRepository $userRepository
      * @return Response
      */
-    public function index(CommandeRepository $commandeRepository, UserRepository $userRepository): Response
+    public function index(CommandeRepository $commandeRepository): Response
     {
+        $this->denyAccessUnlessGranted('ROLE_ADMIN', null, 'Vous n\'avez aucun pouvoir ici');
+
         $date = date('d / m');
         $commande = $commandeRepository->findAll();
 
@@ -55,6 +55,8 @@ class AdminController extends AbstractController
      */
     public function delete(Request $request, Commande $commande): Response
     {
+        $this->denyAccessUnlessGranted('ROLE_ADMIN', null, 'Vous n\'avez aucun pouvoir ici');
+
         if ($this->isCsrfTokenValid('delete'.$commande->getId(), $request->request->get('_token'))) {
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->remove($commande);
@@ -63,12 +65,15 @@ class AdminController extends AbstractController
 
         return $this->redirectToRoute('commande_index');
     }
+
 //Controller admin for changing "Plat" entity
     /**
      * @Route("/plat", name="plat_index", methods={"GET"})
      */
     public function indexPlat(PlatRepository $platRepository): Response
     {
+        $this->denyAccessUnlessGranted('ROLE_ADMIN', null, 'Vous n\'avez aucun pouvoir ici');
+
         return $this->render('plat/index.html.twig', [
             'plats' => $platRepository->findAll(),
         ]);
@@ -79,6 +84,8 @@ class AdminController extends AbstractController
      */
     public function editPlat(Request $request, Plat $plat): Response
     {
+        $this->denyAccessUnlessGranted('ROLE_ADMIN', null, 'Vous n\'avez aucun pouvoir ici');
+
         $form = $this->createForm(PlatType::class, $plat);
         $form->handleRequest($request);
 
@@ -99,6 +106,8 @@ class AdminController extends AbstractController
      */
     public function indexDessert(DessertRepository $dessertRepository): Response
     {
+        $this->denyAccessUnlessGranted('ROLE_ADMIN', null, 'Vous n\'avez aucun pouvoir ici');
+
         return $this->render('dessert/index.html.twig', [
             'desserts' => $dessertRepository->findAll(),
         ]);
@@ -109,6 +118,8 @@ class AdminController extends AbstractController
      */
     public function editDessert(Request $request, Dessert $dessert): Response
     {
+        $this->denyAccessUnlessGranted('ROLE_ADMIN', null, 'Vous n\'avez aucun pouvoir ici');
+
         $form = $this->createForm(DessertType::class, $dessert);
         $form->handleRequest($request);
 

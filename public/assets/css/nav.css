@@ -39,14 +39,17 @@ a:hover{
 .zoo:hover{
     transform: scale(1.1);
 }
+
 .big_nav{
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
+
 .small_nav{
     display: none;
 }
+
 .nav_bar{
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
@@ -54,6 +57,7 @@ a:hover{
     margin: 4px;
     width: 30px;
 }
+
 @media screen and (max-width: 580px){
     .small_nav{
         display: flex;

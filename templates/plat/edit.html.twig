@@ -3,10 +3,11 @@
 {% block title %}Edit Plat{% endblock %}
 
 {% block body %}
+
     <h1>Edit Plat</h1>
 
-    {{ include('plat/_form.html.twig', {'button_label': 'Update'}) }}
+    {{ include('plat/_form.html.twig', {'button_label': 'Modifier'}) }}
 
-    <a href="{{ path('plat_index') }}">back to list</a>
+    <a href="{{ path('plat_index') }}">Retour à la liste</a>
 
 {% endblock %}
