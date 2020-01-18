@@ -35,6 +35,7 @@ h2{
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
 h4{
     padding: 15px 10px;
 }
@@ -43,15 +44,23 @@ h5{
     text-align: center;
     color: white;
 }
+
+a{
+    color: white;
+}
+
 label{
     margin-bottom: -0.5rem;
 }
+
 /*flou sur page d'acceuil à l'activation du JS pour fenetre popup*/
 .blur.active{
     filter: blur(10px);
     pointer-events: none;
     user-select: none;
 }
+
+/*gestion du popup page en travaux*/
 .travaux{
     width: 40%;
     height: auto;
@@ -64,6 +73,7 @@ label{
     opacity: 0;
     transition: .5s;
 }
+
 .travaux.active{
     display: flex;
     justify-content: center;
@@ -74,21 +84,25 @@ label{
     opacity: 1;
     transition: .5s;
 }
+
 .place_bt_close_travaux{
     position: absolute;
     top: 15%;
     right: 5%;
 }
+
 .place_bt_close_mention{
     position: absolute;
     bottom: 4%;
     right: 5%;
 }
+
 .bt_close{
     position: relative;
     cursor: pointer;
     margin: 10px;
 }
+
 .bt_close_l{
     background-color: #ffffff;
     height: 3px;
@@ -96,6 +110,7 @@ label{
     transform: translate(-50%, -50%) rotate(45deg) ;
     position: absolute;
 }
+
 .bt_close_r{
     background-color: rgba(255, 255, 255, 0.91);
     height: 3px;

@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('assets/css/form.css') }}">
+{% endblock %}
+
+{% block body %}
+    <div class="blur">
+
+        <div class="fond-inscription">
+
+            <div class="placement_nav">
+                {% include 'common/_nav.html.twig' %}
+            </div>
+
+            <h3>Pas de cuisine le weekend, reviens lundi !</h3>
+
+        </div>
+
+        <div class="form_footer">
+            {% include 'common/_footer.html.twig' %}
+        </div>
+
+    </div>
+
+    {% include 'mentionLegal.html.twig' %}
+    {% include 'travaux.html.twig' %}
+
+    <script type="text/javascript" src="{{ asset('assets/js/script.js') }}"></script>
+
+{% endblock %}

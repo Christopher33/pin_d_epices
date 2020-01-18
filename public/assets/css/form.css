@@ -1,3 +1,5 @@
+/*Base des formulaires*/
+
 .fond-inscription{
     background: url("../img/img_form.jpg") fixed;
     background-size: cover;
@@ -85,6 +87,7 @@
     padding-top: 10px;
 }
 
+/*création et placement des boutons des formulaires*/
 .bt_valid{
     color: rgb(95, 149, 75);
     padding: 6px 14px;

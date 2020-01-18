@@ -22,6 +22,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class AdminController extends AbstractController
 {
     /**
+     * page d'accueil de l'admin, vérification du role admin pour avoir accès.
      * @Route("/", name="app_admin")
      */
     public function adminDashboard()
@@ -32,6 +33,7 @@ class AdminController extends AbstractController
     }
 
     /**
+     * page des commandes enregistrées dans la base de données
      * @Route("/coco", name="commande_index", methods={"GET"})
      * @param CommandeRepository $commandeRepository
      * @param UserRepository $userRepository
@@ -39,8 +41,6 @@ class AdminController extends AbstractController
      */
     public function index(CommandeRepository $commandeRepository): Response
     {
-        $this->denyAccessUnlessGranted('ROLE_ADMIN', null, 'Vous n\'avez aucun pouvoir ici');
-
         $date = date('d / m');
         $commande = $commandeRepository->findAll();
 
@@ -55,13 +55,11 @@ class AdminController extends AbstractController
      */
     public function delete(Request $request, Commande $commande): Response
     {
-        $this->denyAccessUnlessGranted('ROLE_ADMIN', null, 'Vous n\'avez aucun pouvoir ici');
-
-        if ($this->isCsrfTokenValid('delete'.$commande->getId(), $request->request->get('_token'))) {
-            $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->remove($commande);
-            $entityManager->flush();
-        }
+            if ($this->isCsrfTokenValid('delete'.$commande->getId(), $request->request->get('_token'))) {
+                $entityManager = $this->getDoctrine()->getManager();
+                $entityManager->remove($commande);
+                $entityManager->flush();
+            }
 
         return $this->redirectToRoute('commande_index');
     }
@@ -72,8 +70,6 @@ class AdminController extends AbstractController
      */
     public function indexPlat(PlatRepository $platRepository): Response
     {
-        $this->denyAccessUnlessGranted('ROLE_ADMIN', null, 'Vous n\'avez aucun pouvoir ici');
-
         return $this->render('plat/index.html.twig', [
             'plats' => $platRepository->findAll(),
         ]);
@@ -84,16 +80,14 @@ class AdminController extends AbstractController
      */
     public function editPlat(Request $request, Plat $plat): Response
     {
-        $this->denyAccessUnlessGranted('ROLE_ADMIN', null, 'Vous n\'avez aucun pouvoir ici');
-
         $form = $this->createForm(PlatType::class, $plat);
         $form->handleRequest($request);
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $this->getDoctrine()->getManager()->flush();
+            if ($form->isSubmitted() && $form->isValid()) {
+                $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('plat_index');
-        }
+                return $this->redirectToRoute('plat_index');
+            }
 
         return $this->render('plat/edit.html.twig', [
             'plat' => $plat,
@@ -106,8 +100,6 @@ class AdminController extends AbstractController
      */
     public function indexDessert(DessertRepository $dessertRepository): Response
     {
-        $this->denyAccessUnlessGranted('ROLE_ADMIN', null, 'Vous n\'avez aucun pouvoir ici');
-
         return $this->render('dessert/index.html.twig', [
             'desserts' => $dessertRepository->findAll(),
         ]);
@@ -118,16 +110,14 @@ class AdminController extends AbstractController
      */
     public function editDessert(Request $request, Dessert $dessert): Response
     {
-        $this->denyAccessUnlessGranted('ROLE_ADMIN', null, 'Vous n\'avez aucun pouvoir ici');
-
         $form = $this->createForm(DessertType::class, $dessert);
         $form->handleRequest($request);
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $this->getDoctrine()->getManager()->flush();
+            if ($form->isSubmitted() && $form->isValid()) {
+                $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('dessert_index');
-        }
+                return $this->redirectToRoute('dessert_index');
+            }
 
         return $this->render('dessert/edit.html.twig', [
             'dessert' => $dessert,

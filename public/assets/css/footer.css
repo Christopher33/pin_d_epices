@@ -27,6 +27,7 @@ footer{
     height: 100%;
 }
 
+/*gestion du placement du logo*/
 .box_logo{
     display: flex;
     align-items: center;
@@ -34,6 +35,7 @@ footer{
     position: relative;
 }
 
+/*gestion de l'animation du logo*/
 .logo_eteint{
     width: auto;
     height: 220px;
@@ -98,6 +100,7 @@ footer{
     }
 }
 
+/*gestion de la fenetre des mentions légales + js*/
 .mention{
     width: 80%;
     height: auto;

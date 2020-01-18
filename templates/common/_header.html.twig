@@ -6,36 +6,36 @@
 
     {% include 'common/_nav.html.twig' %}
 
-<div class="big_box">
-    <div class="row text-center justify-content-center">
-        <div class="col-12">
-            <span class="pe">Pin d'épices</span>
+    <div class="big_box">
+        <div class="row text-center justify-content-center">
+            <div class="col-12">
+                <span class="pe">Pin d'épices</span>
+            </div>
         </div>
-    </div>
 
-    <div class="row text-center pt-2 pb-4">
-        <div class="col-12 smooth">
-            {% if is_granted("IS_AUTHENTICATED_FULLY") %}
-                <span class="textacroch">Bonjour {{ app.user.firstName }}</span>
-            {% else %}
-                <span class="textacroch">Des produits locaux de saison, cuisinée à coté de chez vous<br>Livrés pour vous !</span>
-            {% endif %}
-        </div>
-    </div>
-
-    <div class="row text-center pt-3 pb-3">
-        <div class="col-12">
+        <div class="row text-center pt-2 pb-4">
+            <div class="col-12 smooth">
                 {% if is_granted("IS_AUTHENTICATED_FULLY") %}
-                    <a href="{{ path('app_commande') }}" class="bt">Commande</a>
-                    <a href="{{ path('edit') }}" class="bt">Modifier</a>
-                    <a href="{{ path('app_logout') }}" class="bt">Déconnexion</a>
+                    <span class="textacroch">Bonjour {{ app.user.firstName }}</span>
                 {% else %}
-                    <a href="{{ path('app_register') }}" class="bt">Inscription</a>
-                    <a href="{{ path('app_login') }}" class="bt">Connexion</a>
+                    <span class="textacroch">Des produits locaux de saison, cuisinés à coté de chez vous<br>Livrés pour vous !</span>
                 {% endif %}
+            </div>
         </div>
-    </div>
 
-</div>
+        <div class="row text-center pt-3 pb-3">
+            <div class="col-12">
+                    {% if is_granted("IS_AUTHENTICATED_FULLY") %}
+                        <a href="{{ path('app_commande') }}" class="bt">Commande</a>
+                        <a href="{{ path('edit') }}" class="bt">Modifier</a>
+                        <a href="{{ path('app_logout') }}" class="bt">Déconnexion</a>
+                    {% else %}
+                        <a href="{{ path('app_register') }}" class="bt">Inscription</a>
+                        <a href="{{ path('app_login') }}" class="bt">Connexion</a>
+                    {% endif %}
+            </div>
+        </div>
+
+    </div>
 
 </header>

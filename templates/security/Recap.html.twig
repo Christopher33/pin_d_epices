@@ -1,7 +1,6 @@
 {% extends 'base.html.twig' %}
 
 {% block stylesheets %}
-
     <link rel="stylesheet" href="{{ asset('assets/css/form.css') }}">
 {% endblock %}
 
@@ -17,7 +16,6 @@
             {% if is_granted("IS_AUTHENTICATED_FULLY") %}
 
             <div class="inscription">
-
                 <span class="titre_form">Votre commande</span>
 
                 <p class="margin_titre_form">{{ rendu.plat }} plat à {{ totPlat }} €</p>
@@ -28,16 +26,15 @@
 
                 <p class="align_total">Total : {{ total }} €</p>
                 <a class="bt_cancel" href="{{ path('index') }}" >Retour</a>
-
-
             </div>
-                <div class="reglement">
-                    <p>
-                        Livraison prévue entre 12h et 13h30 au plus tard.
-                        Le règlement ce fera à la livraison ainsi que le choix des boissons. <br>
-                        Mode de payement accepté : Carte bancaire, ticket restaurant, espèce.
-                    </p>
-                </div>
+
+            <div class="reglement">
+                <p>
+                    Livraison prévue entre 12h et 13h30 au plus tard.
+                    Le règlement ce fera à la livraison ainsi que le choix des boissons. <br>
+                    Mode de payement accepté : Carte bancaire, ticket restaurant, espèce.
+                </p>
+            </div>
 
             {% else %}
                 <p>Connecte te toi enculer</p>

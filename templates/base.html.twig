@@ -13,19 +13,21 @@
 {#    My base CSS web site  #}
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
 
-{#  Import CSS on only web page call    #}
+{#  Import CSS uniquement les pages nécessaire   #}
     {% block stylesheets %}{% endblock %}
 
-{#    TYPO front google.font#}
+{#    TYPO front google.font  #}
     <link href="https://fonts.googleapis.com/css?family=Bad+Script|Lobster|Montserra&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
 
-{#    Web site title    #}
+{#    Titre de mon site    #}
     <title>Pin d'épices</title>
     <link rel="icon" type="image/png" href="../public/assets/img/small_logo.png">
 
 </head>
+
     {% block body %}
 
     {% endblock %}
+
 </html>

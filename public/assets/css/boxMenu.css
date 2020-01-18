@@ -1,3 +1,5 @@
+/*Page des menus du jour*/
+
 .page_menu{
     height: 100vh;
     width: 100%;
@@ -40,6 +42,7 @@
     left: 0;
 }
 
+/*icone directive visible sur la page acceuil*/
 .fleche{
     height: auto;
     width: 8%;
@@ -49,6 +52,7 @@
     transform: translateX(-50%);
 }
 
+/*Gestion en trois parties des boites menu*/
 .box{
     height: 400px;
     width: 300px;
@@ -153,6 +157,7 @@ h5 ul{
     text-align: left;
 }
 
+/*couleur de ma 3ème boite*/
 .back-plat{
     background-color: teal;
 }
@@ -165,7 +170,8 @@ h5 ul{
     background-color: rgb(119, 18, 68);
 }
 
-.PP{
+/*placement du text et du bouton dans mes boites*/
+.poids_prix{
     padding: 10px;
     height: auto;
     width: 100%;

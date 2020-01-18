@@ -1,3 +1,4 @@
+// gestion de la fenetre des mentions légales
 function mentionL() {
     let blur = document.querySelector('.blur');
     blur.classList.toggle('active');
@@ -5,6 +6,7 @@ function mentionL() {
     mention.classList.toggle('active');
 }
 
+// gestion des pages et liens en travaux
 function travaux() {
     let blur = document.querySelector('.blur');
     blur.classList.toggle('active');

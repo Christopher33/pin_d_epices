@@ -19,9 +19,9 @@ class SecurityController extends AbstractController
      */
     public function login(AuthenticationUtils $authenticationUtils): Response
     {
-         if ($this->getUser()) {
-             return $this->redirectToRoute('index');
-         }
+             if ($this->getUser()) {
+                 return $this->redirectToRoute('index');
+             }
 
         // get the login error if there is one
         $error = $authenticationUtils->getLastAuthenticationError();
@@ -56,14 +56,14 @@ class SecurityController extends AbstractController
         $userForm = $this->createForm(UserType::class, $user);
         $userForm->handleRequest($request);
 
-        if ($userForm->isSubmitted() && $userForm->isValid()) {
-            // encode the password
-            $user->setPassword(
-                $passwordEncoder->encodePassword(
-                    $user,
-                    $userForm->get('password')->getData()
-                )
-            );
+            if ($userForm->isSubmitted() && $userForm->isValid()) {
+                // encode the password
+                $user->setPassword(
+                    $passwordEncoder->encodePassword(
+                        $user,
+                        $userForm->get('password')->getData()
+                    )
+                );
                 $user = $userForm->getData();
                 $entityManager->persist($user);
                 $entityManager->flush();

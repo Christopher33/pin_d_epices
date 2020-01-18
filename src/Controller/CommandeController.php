@@ -7,7 +7,6 @@ use App\Entity\Commande;
 use App\Form\CommandeType;
 use App\Repository\DessertRepository;
 use App\Repository\PlatRepository;
-use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -18,9 +17,9 @@ class CommandeController extends AbstractController
     /**
      * @Route("/commande", name="app_commande")
      */
-    public function commande(Request $request, EntityManagerInterface $entityManager, PlatRepository $platRepository, DessertRepository $dessertRepository)
+    public function commande(Request $request, PlatRepository $platRepository, DessertRepository $dessertRepository)
     {
-
+//        création d'une nouvelle commande par rapport a l'entity plat et dessert, selection du jour de la semaine
         $commande = new Commande();
         $form = $this->createForm(CommandeType::class, $commande);
         $form->handleRequest($request);
@@ -34,6 +33,7 @@ class CommandeController extends AbstractController
         $dessert = $dessertRepository->findOneBy(['day' => $dayAjd]);
         $priceDessert = $dessert->getPrice();
 
+//        permet de créer un récapitulatif de la commande si le formulaire est valide
             if ($form->isSubmitted() && $form->isValid()) {
 
                 $commande->setUser($this->getUser());
@@ -60,13 +60,18 @@ class CommandeController extends AbstractController
                     'totBoisson' => $e
                     ]);
             }
-
-        return $this->render('security/commande.html.twig', [
+//commande possible uniquement en semaine, le if vérifie si nous sommes samedi ou dimanche
+        if ($dayAjd == 'Sat' or 'Sun') {
+            return $this->render('weekend.html.twig');
+        } else {
+            return $this->render('security/commande.html.twig', [
             'commande' => $form->createView(),
-        ]);
+            ]);
+        }
     }
 
     /**
+     * pas encore effectif
      * @Route("/calcul", name="app_calcul")
      */
     public function calculPlat(Request $request, PlatRepository $platRepository)
